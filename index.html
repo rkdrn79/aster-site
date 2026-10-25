@@ -42,7 +42,6 @@
         <span>Aster</span>
       </a>
       <ul class="nav-links" id="nav-menu">
-        <li><a href="#writing">Writing</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#download">Download</a></li>
@@ -85,73 +84,6 @@
           <img class="only-light" loading="lazy" src="assets/hero.jpg" srcset="assets/hero-1600.jpg 1600w, assets/hero.jpg 2400w" sizes="(min-width: 1296px) 1200px, calc(100vw - 40px)" width="2400" height="1500" decoding="async" alt="Aster with a research project open: the Experiment notebook in the middle, with planned Runs, a Needs you list and a results table, and the Experiment agent docked on the right">
           <img class="only-dark" loading="lazy" src="assets/hero-dark.jpg" srcset="assets/hero-dark-1600.jpg 1600w, assets/hero-dark.jpg 2400w" sizes="(min-width: 1296px) 1200px, calc(100vw - 40px)" width="2400" height="1500" decoding="async" alt="Aster with a research project open: the Experiment notebook in the middle, with planned Runs, a Needs you list and a results table, and the Experiment agent docked on the right">
         </div>
-      </div>
-    </section>
-
-    <section class="section section-tint" id="writing" aria-labelledby="writing-title">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">Writing</p>
-          <h2 id="writing-title">Write with your results.</h2>
-          <p class="lead">The paper sits beside the Runs it reports. Select a passage, ask the Writing agent to revise it, and recompile. Every number you record stays tied to the Run, metric, and split it came from, and Aster tells you when one stops matching.</p>
-        </header>
-
-        <figure class="clip">
-          <div class="window">
-            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <video class="only-light" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/writing-revise.jpg" aria-describedby="clip-revise-cap">
-              <source src="assets/clips/writing-revise.webm" type='video/webm; codecs="av01.0.08M.08"'>
-              <source src="assets/clips/writing-revise.mp4" type="video/mp4">
-            </video>
-            <video class="only-dark" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/writing-revise-dark.jpg" aria-describedby="clip-revise-cap">
-              <source src="assets/clips/writing-revise-dark.webm" type='video/webm; codecs="av01.0.08M.08"'>
-              <source src="assets/clips/writing-revise-dark.mp4" type="video/mp4">
-            </video>
-            <button class="clip-toggle" type="button" aria-label="Pause clip" hidden>
-              <svg class="i-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M9 6.5v11M15 6.5v11"/></svg>
-              <svg class="i-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8.5 6.3v11.4l9-5.7z"/></svg>
-            </button>
-          </div>
-          <figcaption class="media-caption clip-caption" id="clip-revise-cap"><strong>Revise with the Writing agent.</strong> The abstract is selected in <code>paper/main.tex</code> and sent with “Lead with the result and give the numbers.” The agent reads the file and edits those lines, the source reloads, and Compile PDF shows the new abstract.</figcaption>
-        </figure>
-
-        <ul class="points">
-          <li>
-            <h3>Select, revise, recompile</h3>
-            <p>Select text in the TeX source or the PDF and choose <strong>Revise</strong>. The request asks the Writing agent to check that the passage is unchanged and edit only it; <strong>Compile PDF</strong> rebuilds with Tectonic.</p>
-          </li>
-          <li>
-            <h3>Numbers backed by Runs</h3>
-            <p>When a result goes into the paper, the agent records a claim that ties the number to a Run’s metric and split. The harness refuses a value that disagrees with the Run.</p>
-          </li>
-          <li>
-            <h3>One-click fixes</h3>
-            <p>The <strong>Claims</strong> drawer marks each number verified, stale, mismatched, or missing evidence. When the paper no longer states its Run’s value, <strong>Update text</strong> writes the current value into the TeX and records it again.</p>
-          </li>
-          <li>
-            <h3>SyncTeX both ways</h3>
-            <p>Double-click the PDF to jump to the source line, or show the editor’s cursor line in the PDF.</p>
-          </li>
-        </ul>
-
-        <figure class="clip">
-          <div class="window">
-            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <video class="only-light" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/writing-claims.jpg" aria-describedby="clip-claims-cap">
-              <source src="assets/clips/writing-claims.webm" type='video/webm; codecs="av01.0.08M.08"'>
-              <source src="assets/clips/writing-claims.mp4" type="video/mp4">
-            </video>
-            <video class="only-dark" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/writing-claims-dark.jpg" aria-describedby="clip-claims-cap">
-              <source src="assets/clips/writing-claims-dark.webm" type='video/webm; codecs="av01.0.08M.08"'>
-              <source src="assets/clips/writing-claims-dark.mp4" type="video/mp4">
-            </video>
-            <button class="clip-toggle" type="button" aria-label="Pause clip" hidden>
-              <svg class="i-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M9 6.5v11M15 6.5v11"/></svg>
-              <svg class="i-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8.5 6.3v11.4l9-5.7z"/></svg>
-            </button>
-          </div>
-          <figcaption class="media-caption clip-caption" id="clip-claims-cap"><strong>Fix a number that no longer matches its Run.</strong> The Claims drawer lists one mismatch, one stale claim, and two verified ones. <em>Update text to 85.8%</em> rewrites line 32 to the Run’s value, the claim turns verified, and the recompiled PDF says 85.8%.</figcaption>
-        </figure>
       </div>
     </section>
 
@@ -375,12 +307,16 @@
             </figure>
           </article>
 
-          <article class="feature" id="feature-compare" aria-labelledby="feature-compare-title">
+          <article class="feature feature-wide" id="feature-compare" aria-labelledby="feature-compare-title">
             <div class="feature-text">
-              <p class="feature-num">03</p>
-              <h3 id="feature-compare-title">Compare</h3>
-              <p>Line up 2–6 Runs: baseline, last and best values at one precision per column, mismatched units or evaluation conditions, config differences, and model outputs — text or image — matched by sample ID.</p>
-              <p>Rate samples blind, A/B, and see how your ratings agree with the agent judge.</p>
+              <div class="feature-title">
+                <p class="feature-num">03</p>
+                <h3 id="feature-compare-title">Compare</h3>
+              </div>
+              <div class="feature-body">
+                <p>Line up 2–6 Runs: baseline, last and best values at one precision per column, mismatched units or evaluation conditions, config differences, and model outputs — text or image — matched by sample ID.</p>
+                <p>Rate samples blind, A/B, and see how your ratings agree with the agent judge.</p>
+              </div>
             </div>
             <figure class="feature-media">
               <div class="window">
@@ -391,28 +327,78 @@
             </figure>
           </article>
 
-          <article class="feature" id="feature-writing-claims" aria-labelledby="feature-writing-claims-title">
+          <article class="feature feature-wide" id="feature-writing" aria-labelledby="feature-writing-title">
             <div class="feature-text">
-              <p class="feature-num">04</p>
-              <h3 id="feature-writing-claims-title">Writing and Claims</h3>
-              <p>TeX source, the PDF compiled with Tectonic, and a Writing agent side by side, with SyncTeX in both directions.</p>
-              <p>The <strong>Claims</strong> drawer marks every recorded number as verified, stale, mismatched, or missing evidence, lists result-like numbers no Run backs, and fixes a mismatched number in one click. <a href="#writing">Watch it work</a>.</p>
+              <div class="feature-title">
+                <p class="feature-num">04</p>
+                <h3 id="feature-writing-title">Writing</h3>
+              </div>
+              <div class="feature-body">
+                <p>The paper sits beside the Runs it reports: TeX source, the PDF compiled with Tectonic, and a Writing agent side by side, with SyncTeX in both directions.</p>
+                <p>Select text in the TeX source or the PDF and choose <strong>Revise</strong>. The Writing agent edits only that passage, and <strong>Compile PDF</strong> shows the result.</p>
+              </div>
             </div>
-            <figure class="feature-media">
+            <figure class="feature-media clip">
               <div class="window">
                 <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <img class="only-light" src="assets/writing-claims.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Writing page with the TeX source, the compiled PDF, and the Claims drawer showing a mismatch, a stale claim, and two verified claims">
-                <img class="only-dark" src="assets/writing-claims-dark.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Writing page with the TeX source, the compiled PDF, and the Claims drawer showing a mismatch, a stale claim, and two verified claims">
+                <video class="only-light" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/writing-revise.jpg" aria-describedby="clip-revise-cap">
+                  <source src="assets/clips/writing-revise.webm" type='video/webm; codecs="av01.0.08M.08"'>
+                  <source src="assets/clips/writing-revise.mp4" type="video/mp4">
+                </video>
+                <video class="only-dark" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/writing-revise-dark.jpg" aria-describedby="clip-revise-cap">
+                  <source src="assets/clips/writing-revise-dark.webm" type='video/webm; codecs="av01.0.08M.08"'>
+                  <source src="assets/clips/writing-revise-dark.mp4" type="video/mp4">
+                </video>
+                <button class="clip-toggle" type="button" aria-label="Pause clip" hidden>
+                  <svg class="i-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M9 6.5v11M15 6.5v11"/></svg>
+                  <svg class="i-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8.5 6.3v11.4l9-5.7z"/></svg>
+                </button>
               </div>
+              <figcaption class="media-caption clip-caption" id="clip-revise-cap"><strong>Revise with the Writing agent.</strong> The abstract is selected in <code>paper/main.tex</code> and sent with “Lead with the result and give the numbers.” The agent reads the file and edits those lines, the source reloads, and Compile PDF shows the new abstract.</figcaption>
             </figure>
           </article>
 
-          <article class="feature" id="feature-loop" aria-labelledby="feature-loop-title">
+          <article class="feature feature-wide" id="feature-claims" aria-labelledby="feature-claims-title">
             <div class="feature-text">
-              <p class="feature-num">05</p>
-              <h3 id="feature-loop-title">Research loop</h3>
-              <p>Give an agent an objective, a metric, and a budget of Runs and hours. It writes each hypothesis, Run, result, and decision to the loop ledger and launches only through the harness.</p>
-              <p>It stops for you before going over budget or changing the evaluation.</p>
+              <div class="feature-title">
+                <p class="feature-num">05</p>
+                <h3 id="feature-claims-title">Claims</h3>
+              </div>
+              <div class="feature-body">
+                <p>When a result goes into the paper, the agent records a claim that ties the number to a Run’s metric and split; the harness refuses a value that disagrees with the Run.</p>
+                <p>The <strong>Claims</strong> drawer marks every number as verified, stale, mismatched, or missing evidence and lists result-like numbers no Run backs. When the paper no longer states its Run’s value, <strong>Update text</strong> fixes it in one click.</p>
+              </div>
+            </div>
+            <figure class="feature-media clip">
+              <div class="window">
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <video class="only-light" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/writing-claims.jpg" aria-describedby="clip-claims-cap">
+                  <source src="assets/clips/writing-claims.webm" type='video/webm; codecs="av01.0.08M.08"'>
+                  <source src="assets/clips/writing-claims.mp4" type="video/mp4">
+                </video>
+                <video class="only-dark" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/writing-claims-dark.jpg" aria-describedby="clip-claims-cap">
+                  <source src="assets/clips/writing-claims-dark.webm" type='video/webm; codecs="av01.0.08M.08"'>
+                  <source src="assets/clips/writing-claims-dark.mp4" type="video/mp4">
+                </video>
+                <button class="clip-toggle" type="button" aria-label="Pause clip" hidden>
+                  <svg class="i-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M9 6.5v11M15 6.5v11"/></svg>
+                  <svg class="i-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8.5 6.3v11.4l9-5.7z"/></svg>
+                </button>
+              </div>
+              <figcaption class="media-caption clip-caption" id="clip-claims-cap"><strong>Fix a number that no longer matches its Run.</strong> The Claims drawer lists one mismatch, one stale claim, and two verified ones. <em>Update text to 85.8%</em> rewrites line 32 to the Run’s value, the claim turns verified, and the recompiled PDF says 85.8%.</figcaption>
+            </figure>
+          </article>
+
+          <article class="feature feature-wide" id="feature-loop" aria-labelledby="feature-loop-title">
+            <div class="feature-text">
+              <div class="feature-title">
+                <p class="feature-num">06</p>
+                <h3 id="feature-loop-title">Research loop</h3>
+              </div>
+              <div class="feature-body">
+                <p>Give an agent an objective, a metric, and a budget of Runs and hours. It writes each hypothesis, Run, result, and decision to the loop ledger and launches only through the harness.</p>
+                <p>It stops for you before going over budget or changing the evaluation.</p>
+              </div>
             </div>
             <figure class="feature-media">
               <div class="window">
@@ -426,7 +412,7 @@
           <article class="feature feature-wide" id="feature-library" aria-labelledby="feature-library-title">
             <div class="feature-text">
               <div class="feature-title">
-                <p class="feature-num">06</p>
+                <p class="feature-num">07</p>
                 <h3 id="feature-library-title">Library</h3>
               </div>
               <div class="feature-body">
@@ -454,12 +440,16 @@
             </figure>
           </article>
 
-          <article class="feature" id="feature-compute" aria-labelledby="feature-compute-title">
+          <article class="feature feature-wide" id="feature-compute" aria-labelledby="feature-compute-title">
             <div class="feature-text">
-              <p class="feature-num">07</p>
-              <h3 id="feature-compute-title">Compute and Deadlines</h3>
-              <p>SSH hosts, GPUs, and SLURM queues across projects, with a GPU budget per host and project: jobs over budget are submitted held and released in priority order.</p>
-              <p>Conference deadlines from the ccfddl and Hugging Face AI deadlines catalogs, in your time zone.</p>
+              <div class="feature-title">
+                <p class="feature-num">08</p>
+                <h3 id="feature-compute-title">Compute and Deadlines</h3>
+              </div>
+              <div class="feature-body">
+                <p>SSH hosts, GPUs, and SLURM queues across projects, with a GPU budget per host and project: jobs over budget are submitted held and released in priority order.</p>
+                <p>Conference deadlines from the ccfddl and Hugging Face AI deadlines catalogs, in your time zone.</p>
+              </div>
             </div>
             <figure class="feature-media">
               <div class="window">
@@ -470,12 +460,16 @@
             </figure>
           </article>
 
-          <article class="feature" id="feature-code" aria-labelledby="feature-code-title">
+          <article class="feature feature-wide" id="feature-code" aria-labelledby="feature-code-title">
             <div class="feature-text">
-              <p class="feature-num">08</p>
-              <h3 id="feature-code-title">Workbench and Code layout</h3>
-              <p>Chats, terminals, the editor, files, and Git for the project. Switching pages never stops an agent or terminal.</p>
-              <p>The <strong>Research | Code</strong> switch flips the sidebar to a worktree-first layout for pure coding work.</p>
+              <div class="feature-title">
+                <p class="feature-num">09</p>
+                <h3 id="feature-code-title">Workbench and Code layout</h3>
+              </div>
+              <div class="feature-body">
+                <p>Chats, terminals, the editor, files, and Git for the project. Switching pages never stops an agent or terminal.</p>
+                <p>The <strong>Research | Code</strong> switch flips the sidebar to a worktree-first layout for pure coding work.</p>
+              </div>
             </div>
             <figure class="feature-media">
               <div class="window">
