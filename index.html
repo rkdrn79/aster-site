@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aster — The agentic development environment for AI researchers</title>
+  <meta name="description" content="Run experiments with coding agents, keep the evidence of every Run, and write the paper beside it — one project, one window. Free and open source for macOS.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f9f8f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101216" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://rkdrn79.github.io/aster/">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aster">
+  <meta property="og:title" content="Aster — The agentic development environment for AI researchers">
+  <meta property="og:description" content="Run experiments with coding agents, keep the evidence of every Run, and write the paper beside it — one project, one window.">
+  <meta property="og:url" content="https://rkdrn79.github.io/aster/">
+  <meta property="og:image" content="https://rkdrn79.github.io/aster/assets/og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aster showing an Experiment notebook with the Experiment agent docked on the right">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aster — The agentic development environment for AI researchers">
+  <meta name="twitter:description" content="Run experiments with coding agents, keep the evidence of every Run, and write the paper beside it — one project, one window.">
+  <meta name="twitter:image" content="https://rkdrn79.github.io/aster/assets/og.jpg">
+  <meta name="twitter:image:alt" content="Aster showing an Experiment notebook with the Experiment agent docked on the right">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="#top" aria-label="Aster home">
+        <svg class="logo-mark" viewBox="0 0 32 32" width="24" height="24" aria-hidden="true" focusable="false"><rect x="1" y="1" width="30" height="30" rx="7.5"/><path d="M16 7.4v17.2M8.6 11.7l14.8 8.6M8.6 20.3l14.8-8.6"/></svg>
+        <span>Aster</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="visually-hidden">Menu</span>
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path class="i-open" d="M4 7h16M4 12h16M4 17h16"/><path class="i-close" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="https://github.com/rkdrn79/aster" class="nav-gh">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-copy">
+        <p class="eyebrow-pill"><span class="pill-dot" aria-hidden="true"></span>Aster v0.1.0 · MVP draft for macOS</p>
+        <h1 id="hero-title"><span class="visually-hidden">Aster — </span>The agentic development environment for AI researchers.</h1>
+        <p class="hero-sub">Run experiments with coding agents, keep the evidence of every Run, and write the paper beside it — one project, one window.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://github.com/rkdrn79/aster/releases/latest/download/Aster-mac-arm64.dmg">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
+            Download for macOS
+          </a>
+          <a class="btn btn-secondary" href="https://github.com/rkdrn79/aster">
+            <svg viewBox="0 0 16 16" width="17" height="17" aria-hidden="true" focusable="false" class="gh-mark"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+        <p class="cta-meta">Apple Silicon · macOS 12 or later · v0.1.0</p>
+        <p class="cta-links"><a href="https://github.com/rkdrn79/aster/releases/latest/download/Aster-mac-arm64.zip">Download .zip</a><span aria-hidden="true">·</span><a href="https://github.com/rkdrn79/aster/releases">All releases</a></p>
+      </div>
+
+      <div class="container hero-shot">
+        <div class="window window-hero">
+          <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark-1600.jpg 1600w, assets/hero-dark.jpg 2400w" sizes="(min-width: 1296px) 1200px, calc(100vw - 40px)">
+            <img src="assets/hero.jpg" srcset="assets/hero-1600.jpg 1600w, assets/hero.jpg 2400w" sizes="(min-width: 1296px) 1200px, calc(100vw - 40px)" width="2400" height="1500" fetchpriority="high" decoding="async" alt="Aster with a research project open: the Experiment notebook in the middle, with planned Runs, a Needs you list and a results table, and the Experiment agent docked on the right">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Why Aster</p>
+          <h2 id="why-title">The research project is the unit of work.</h2>
+          <p class="lead">A coding environment treats the repository as the unit of work. Aster treats the research project as the unit: the conversations that start the work, the Experiments and Runs that produce results, the paper that reports them, the papers it cites, the GPUs it runs on, and the deadline it is aiming for. Claude Code and Codex do the work in your terminal as usual; Aster records what they actually ran and puts the evidence next to every number they report.</p>
+        </header>
+        <ul class="value-grid">
+          <li>
+            <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5.5h14a1.5 1.5 0 011.5 1.5v8a1.5 1.5 0 01-1.5 1.5h-7l-4.5 3.5v-3.5H5A1.5 1.5 0 013.5 15V7A1.5 1.5 0 015 5.5z"/></svg>
+            <h3>Conversation first</h3>
+            <p>Start from a Claude Code or Codex chat. An Experiment groups the results afterwards; it is not a form to fill in before you can talk to an agent.</p>
+          </li>
+          <li>
+            <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6.5h16M4 12h16M4 17.5h10"/><circle cx="18.5" cy="17.5" r="1.6"/></svg>
+            <h3>Runs with provenance</h3>
+            <p>Every launch records its command, commit, uncommitted diff, host, agent session, log, and metrics. An agent ending its turn never marks a Run as succeeded.</p>
+          </li>
+          <li>
+            <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5h7.5L19 9v10.5H7z"/><path d="M14.5 4.5V9H19M10 13.5l2 2 3.5-4"/></svg>
+            <h3>Numbers backed by Runs</h3>
+            <p>Each result number in the manuscript can point to a Run, metric, and split. Aster flags numbers that changed, went stale, or have nothing behind them.</p>
+          </li>
+          <li>
+            <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg>
+            <h3>You approve, agents execute</h3>
+            <p>Agents propose the next Run with a reason and the exact command. Only you approve it, and the approved command is what runs.</p>
+          </li>
+          <li>
+            <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4.5a5.5 5.5 0 015.5 5.5v3.5l1.5 2.5H5l1.5-2.5V10A5.5 5.5 0 0112 4.5zM10 19a2 2 0 004 0"/></svg>
+            <h3>Agents stop polling</h3>
+            <p>Watches wake an agent when a Run ends, fails, logs NaN, stalls, or crosses a threshold — on your machine or over SSH and SLURM.</p>
+          </li>
+          <li>
+            <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="11" rx="1.5"/><path d="M8.5 19.5h7M12 16v3.5"/></svg>
+            <h3>Your machines, your files</h3>
+            <p>No Aster account or hosted service. Agents and research records stay on your computer and the hosts you connect, in plain files inside the project.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Agents do the work. Aster keeps the record.</h2>
+          <p class="lead">Your agent launches every experiment through a small research harness. The harness writes what it observed into <code>.aster/</code> in your project, and Aster reads those records live.</p>
+        </header>
+
+        <figure class="flow" aria-labelledby="flow-caption">
+          <div class="flow-grid">
+            <div class="flow-arc flow-arc-top flow-arc-l" aria-hidden="true"></div>
+            <div class="flow-arc flow-arc-top flow-arc-m" aria-hidden="true"><span>you decide</span></div>
+            <div class="flow-arc flow-arc-top flow-arc-r" aria-hidden="true"></div>
+
+            <div class="node node-you">
+              <svg class="node-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 19.5c1-3.5 3.7-5 7-5s6 1.5 7 5"/></svg>
+              <strong>You</strong>
+            </div>
+            <div class="edge"><span class="edge-label">ask in a chat</span><span class="edge-line" aria-hidden="true"></span></div>
+            <div class="node">
+              <svg class="node-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5.5h14a1.5 1.5 0 011.5 1.5v8a1.5 1.5 0 01-1.5 1.5h-7l-4.5 3.5v-3.5H5A1.5 1.5 0 013.5 15V7A1.5 1.5 0 015 5.5z"/></svg>
+              <strong>Claude Code / Codex</strong>
+              <span class="node-sub">in Aster</span>
+            </div>
+            <div class="edge"><span class="edge-label mono"><span class="nw">run exec ·</span> <span class="nw">claim add ·</span> <span class="nw">proposal add ·</span> <span class="nw">loop note</span></span><span class="edge-line" aria-hidden="true"></span></div>
+            <div class="node">
+              <svg class="node-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="4.5" width="17" height="15" rx="1.5"/><path d="M7.5 9.5l3 2.5-3 2.5M12.5 15h4"/></svg>
+              <strong>Research harness</strong>
+              <span class="node-sub mono">node cli.mjs</span>
+            </div>
+            <div class="edge"><span class="edge-label">runs your command, writes what it observed</span><span class="edge-line" aria-hidden="true"></span></div>
+            <div class="node node-store">
+              <svg class="node-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><ellipse cx="12" cy="6" rx="7" ry="2.5"/><path d="M5 6v12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></svg>
+              <strong><span class="mono">.aster/</span> in your project</strong>
+              <span class="node-sub mono"><span class="nw">run.json ·</span> <span class="nw">metrics.jsonl ·</span> <span class="nw">train.log ·</span> <span class="nw">code.patch ·</span> <span class="nw">claims.json ·</span> <span class="nw">loop.jsonl</span></span>
+            </div>
+            <div class="edge"><span class="edge-label">read live</span><span class="edge-line" aria-hidden="true"></span></div>
+            <div class="node node-app">
+              <svg class="node-icon node-icon-logo" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1" y="1" width="30" height="30" rx="7.5"/><path d="M16 7.4v17.2M8.6 11.7l14.8 8.6M8.6 20.3l14.8-8.6"/></svg>
+              <strong>Aster</strong>
+              <span class="node-sub"><span class="nw">Notebook ·</span> <span class="nw">Runs ·</span> <span class="nw">Compare ·</span> <span class="nw">Writing ·</span> <span class="nw">Claims</span></span>
+            </div>
+
+            <div class="flow-arc flow-arc-bottom flow-arc-l" aria-hidden="true"></div>
+            <div class="flow-arc flow-arc-bottom flow-arc-m" aria-hidden="true"><span>watch fires: ended · NaN · stall &nbsp;·&nbsp; approve / reject a proposal</span></div>
+            <div class="flow-arc flow-arc-bottom flow-arc-r" aria-hidden="true"></div>
+          </div>
+          <figcaption id="flow-caption" class="flow-caption">
+            <span><strong>Back to the agent:</strong> when a watch fires (ended, NaN, stall) or you approve or reject a proposal, Aster wakes the agent.</span>
+            <span><strong>You decide</strong> in Aster; agents propose.</span>
+          </figcaption>
+        </figure>
+
+        <ol class="steps">
+          <li>
+            <h3>Ask</h3>
+            <p>Describe the experiment in a Workbench chat or the Experiment agent pane. Aster attaches the project context — Runs, metrics, open findings — as a compact chip, not a wall of text.</p>
+          </li>
+          <li>
+            <h3>Run through the harness</h3>
+            <p>The agent launches training with <code><span class="nw">run exec</span> <span class="nw">--experiment &lt;slug&gt;</span> <span class="nw">-- python train.py …</span></code>. The harness runs only that command and records the launch commit, a patch of uncommitted changes, host, argv, and agent session.</p>
+          </li>
+          <li>
+            <h3>Record, don’t claim</h3>
+            <p>Metric lines your code prints (<code>ASTER_METRIC {…}</code>) stream into <code>metrics.jsonl</code>; stdout and stderr go to <code>train.log</code>; the exit code decides the Run’s state.</p>
+          </li>
+          <li>
+            <h3>Watch</h3>
+            <p><code>aster research watch</code> registers what the agent is waiting for. Aster checks local Runs every 15&nbsp;s and SSH Runs every 60&nbsp;s and wakes the agent when one fires, so nobody polls.</p>
+          </li>
+          <li>
+            <h3>Decide</h3>
+            <p>The agent records findings with evidence — a metric, log lines, a file — and proposes the next Run. The proposal appears under <strong>Needs you</strong> in the notebook; you approve or reject it.</p>
+          </li>
+          <li>
+            <h3>Write</h3>
+            <p>When a number goes into <code>paper/main.tex</code>, the agent records a claim that ties it to a Run’s metric. Writing shows each claim as verified, stale, mismatched, or missing evidence.</p>
+          </li>
+        </ol>
+
+        <div class="layout-split">
+          <div class="layout-copy">
+            <h3>Plain files in your project</h3>
+            <p>Everything lives in the project as JSON, JSONL, and logs you can read, diff, and commit.</p>
+          </div>
+          <div class="code-block">
+            <div class="code-head"><span>Project layout</span></div>
+<pre><code>my-project/
+  paper/main.tex  paper/references.bib
+  .aster/
+    project.json          <span class="c">path map of the project</span>
+    claims.json           <span class="c">manuscript numbers → Run evidence</span>
+    experiments/&lt;slug&gt;/
+      experiment.json     <span class="c">question, hypothesis, metric, baseline, seeds</span>
+      loop.jsonl          <span class="c">hypothesis → Run → result → decision</span>
+      proposals.jsonl     <span class="c">next-Run proposals and your decisions</span>
+      quality.jsonl       <span class="c">findings with evidence</span>
+      analysis.jsonl      <span class="c">analyses and the Runs they used</span>
+      runs/&lt;id&gt;/
+        run.json  metrics.jsonl  train.log  code.patch
+        config.json  media.jsonl  artifacts/
+    library/papers/</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Features</p>
+          <h2 id="features-title">From the first chat to the number in the paper.</h2>
+          <p class="lead">Experiments, Runs, the manuscript, the papers it cites, and the GPUs it runs on, side by side in one window.</p>
+        </header>
+
+        <div class="features">
+          <article class="feature" id="feature-notebook" aria-labelledby="feature-notebook-title">
+            <div class="feature-text">
+              <p class="feature-num">01</p>
+              <h3 id="feature-notebook-title">Experiment notebook</h3>
+              <p>Each Experiment opens on a notebook: the plan (question, metric, baseline, seeds), <strong>Needs you</strong> (failed Runs, proposals, and findings waiting on a decision), results with mean ± spread per configuration, analyses, and your conclusion.</p>
+              <p>The <strong>Experiment agent</strong> is docked beside it and can design, analyze, explain a failure, or propose the next Run.</p>
+            </div>
+            <figure class="feature-media">
+              <div class="window">
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <img src="assets/experiment-notebook.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Experiment notebook with the plan, Needs you, results and analyses, and the Experiment agent on the right">
+              </div>
+            </figure>
+          </article>
+
+          <article class="feature" id="feature-runs" aria-labelledby="feature-runs-title">
+            <div class="feature-text">
+              <p class="feature-num">02</p>
+              <h3 id="feature-runs-title">Runs</h3>
+              <p>Live metric curves, the log, config, code patch, and media for every Run.</p>
+              <p>Attach existing JSONL or CSV results, link a SLURM job, or let agents register Runs that Aster picks up on its own.</p>
+            </div>
+            <figure class="feature-media">
+              <div class="window">
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <img src="assets/runs-chart.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Runs page with three learning-rate Runs and their validation curves">
+              </div>
+            </figure>
+          </article>
+
+          <article class="feature" id="feature-compare" aria-labelledby="feature-compare-title">
+            <div class="feature-text">
+              <p class="feature-num">03</p>
+              <h3 id="feature-compare-title">Compare</h3>
+              <p>Line up 2–6 Runs: baseline, last and best values at one precision per column, mismatched units or evaluation conditions, config differences, and model outputs — text or image — matched by sample ID.</p>
+              <p>Rate samples blind, A/B, and see how your ratings agree with the agent judge.</p>
+            </div>
+            <figure class="feature-media">
+              <div class="window">
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <img src="assets/compare.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Compare page with metrics, config differences, and samples side by side">
+              </div>
+            </figure>
+          </article>
+
+          <article class="feature" id="feature-writing" aria-labelledby="feature-writing-title">
+            <div class="feature-text">
+              <p class="feature-num">04</p>
+              <h3 id="feature-writing-title">Writing and Claims</h3>
+              <p>TeX source, the PDF compiled with Tectonic, and a writing agent side by side, with SyncTeX in both directions.</p>
+              <p>The <strong>Claims</strong> drawer marks every recorded number as verified, stale, mismatched, or missing evidence, lists result-like numbers no Run backs, and fixes a stale number in one click.</p>
+            </div>
+            <figure class="feature-media">
+              <div class="window">
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <img src="assets/writing-claims.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Writing page with the TeX source, the compiled PDF, and the Claims drawer">
+              </div>
+            </figure>
+          </article>
+
+          <article class="feature" id="feature-loop" aria-labelledby="feature-loop-title">
+            <div class="feature-text">
+              <p class="feature-num">05</p>
+              <h3 id="feature-loop-title">Research loop</h3>
+              <p>Give an agent an objective, a metric, and a budget of Runs and hours. It writes each hypothesis, Run, result, and decision to the loop ledger and launches only through the harness.</p>
+              <p>It stops for you before going over budget or changing the evaluation.</p>
+            </div>
+            <figure class="feature-media">
+              <div class="window">
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <img src="assets/start-loop.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Start research loop dialog with an objective, a metric, and a budget">
+              </div>
+            </figure>
+          </article>
+
+          <article class="feature" id="feature-library" aria-labelledby="feature-library-title">
+            <div class="feature-text">
+              <p class="feature-num">06</p>
+              <h3 id="feature-library-title">Library</h3>
+              <p>The project’s papers and PDFs with highlights and notes, arXiv and DOI import, and copyable citations.</p>
+              <p>A reading agent summarizes a paper or relates it to your manuscript and code. Drag the divider to give the PDF or the agent more room.</p>
+            </div>
+            <figure class="feature-media">
+              <div class="window">
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <img src="assets/library.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Library with a paper’s PDF on the left and the reading agent on the right">
+              </div>
+              <figcaption class="media-caption">Library screenshot shows <a href="https://arxiv.org/abs/2305.08891">arXiv:2305.08891</a> (Lin et al.), <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption>
+            </figure>
+          </article>
+
+          <article class="feature" id="feature-compute" aria-labelledby="feature-compute-title">
+            <div class="feature-text">
+              <p class="feature-num">07</p>
+              <h3 id="feature-compute-title">Compute and Deadlines</h3>
+              <p>SSH hosts, GPUs, and SLURM queues across projects, with a GPU budget per host and project: jobs over budget are submitted held and released in priority order.</p>
+              <p>Conference deadlines from the ccfddl and Hugging Face AI deadlines catalogs, in your time zone.</p>
+            </div>
+            <figure class="feature-media">
+              <div class="window">
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <img src="assets/home.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Aster home with projects, upcoming deadlines, and compute">
+              </div>
+            </figure>
+          </article>
+
+          <article class="feature" id="feature-code" aria-labelledby="feature-code-title">
+            <div class="feature-text">
+              <p class="feature-num">08</p>
+              <h3 id="feature-code-title">Workbench and Code layout</h3>
+              <p>Chats, terminals, the editor, files, and Git for the project. Switching pages never stops an agent or terminal.</p>
+              <p>The <strong>Research | Code</strong> switch flips the sidebar to a worktree-first layout for pure coding work.</p>
+            </div>
+            <figure class="feature-media">
+              <div class="window">
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <img src="assets/code-layout.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Code layout with worktrees in the sidebar, a terminal streaming training metrics, and the file tree">
+              </div>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="harness" aria-labelledby="harness-title">
+      <div class="container harness">
+        <div class="harness-copy">
+          <p class="eyebrow">Research harness</p>
+          <h2 id="harness-title">One small CLI for every experiment.</h2>
+          <p>The harness is a zero-dependency Node CLI that agents call for every experiment. The app ships the same code and imports it at runtime, so the agent and the UI always agree on what a record means.</p>
+          <ul class="rules">
+            <li><code>run exec</code> runs only the command it is given. Nothing in the harness starts training or decides that a result succeeded; the exit code does.</li>
+            <li>A claim’s value is read from <code>metrics.jsonl</code>. A <code>--value</code> that disagrees with the Run is refused.</li>
+            <li>An agent finding needs evidence, and the harness checks each item against the Run’s files.</li>
+            <li>Only you approve, reject, accept, or dismiss.</li>
+          </ul>
+        </div>
+        <div class="code-block">
+          <div class="code-head"><span>Terminal</span><button class="copy-btn" type="button" data-copy="harness-code">Copy</button></div>
+<pre><code id="harness-code">HARNESS=$(aster research harness-path)
+
+<span class="c"># Launch a Run: only this command runs, and its metrics are recorded</span>
+node $HARNESS run exec --experiment lora-r16 --id seed-42 \
+  --metric-def loss:minimize --metric-def acc:maximize:% \
+  -- python train.py --lr 3e-4
+
+<span class="c"># Tie a manuscript number to that Run's metric</span>
+node $HARNESS claim add --text "LoRA reaches 83.0% validation accuracy" \
+  --run lora-r16/seed-42 --metric acc --split val --format percent:1
+
+<span class="c"># verified / stale / mismatch / missing-evidence</span>
+node $HARNESS claim audit</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="download" aria-labelledby="download-title">
+      <div class="container">
+        <div class="download-hero">
+          <svg class="download-logo logo-mark" viewBox="0 0 32 32" width="56" height="56" aria-hidden="true" focusable="false"><rect x="1" y="1" width="30" height="30" rx="7.5"/><path d="M16 7.4v17.2M8.6 11.7l14.8 8.6M8.6 20.3l14.8-8.6"/></svg>
+          <h2 id="download-title">Download Aster</h2>
+          <p class="lead">Free and open source under the MIT License.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="https://github.com/rkdrn79/aster/releases/latest/download/Aster-mac-arm64.dmg">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
+              Download for macOS
+            </a>
+            <a class="btn btn-secondary" href="https://github.com/rkdrn79/aster">
+              <svg viewBox="0 0 16 16" width="17" height="17" aria-hidden="true" focusable="false" class="gh-mark"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+          <p class="cta-meta">Apple Silicon · macOS 12 or later · v0.1.0</p>
+          <p class="cta-links"><a href="https://github.com/rkdrn79/aster/releases/latest/download/Aster-mac-arm64.zip">Download .zip</a><span aria-hidden="true">·</span><a href="https://github.com/rkdrn79/aster/releases">All releases</a></p>
+        </div>
+
+        <div class="install">
+          <div class="install-card">
+            <h3>Install</h3>
+            <ol class="install-steps">
+              <li>
+                <p>Open the <code>.dmg</code> and drag <strong>Aster</strong> into <strong>Applications</strong>.</p>
+              </li>
+              <li>
+                <p><strong>First launch.</strong> Builds are signed ad hoc and not notarized yet, so macOS blocks the first open. Right-click <strong>Aster</strong> → <strong>Open</strong> → <strong>Open</strong>, or run:</p>
+                <div class="code-block code-inline">
+                  <pre><code id="xattr-code">xattr -dr com.apple.quarantine /Applications/Aster.app</code></pre>
+                  <button class="copy-btn" type="button" data-copy="xattr-code" aria-label="Copy command">Copy</button>
+                </div>
+              </li>
+              <li>
+                <p>Sign in to at least one agent CLI: <a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code</a> or <a href="https://github.com/openai/codex">Codex</a>. Any other CLI agent runs in a terminal tab.</p>
+              </li>
+              <li>
+                <p>Open a project: <strong>Home → Add project</strong> and pick a folder. For a new project, create an Experiment or a manuscript and Aster writes <code>.aster/</code> and <code>paper/</code> for you, without overwriting existing files.</p>
+              </li>
+            </ol>
+          </div>
+          <div class="install-card">
+            <h3>Requirements</h3>
+            <ul class="req-list">
+              <li><span class="req-tag">Required</span><span>A Mac with Apple Silicon, macOS 12 or later.</span></li>
+              <li><span class="req-tag">Required</span><span>At least one agent CLI signed in: Claude Code or Codex.</span></li>
+              <li><span class="req-tag req-optional">Optional</span><span><a href="https://tectonic-typesetting.github.io/">Tectonic</a> on <code>PATH</code> to compile PDFs.</span></li>
+              <li><span class="req-tag req-optional">Optional</span><span>SSH access to your GPU hosts, with SLURM to submit jobs.</span></li>
+            </ul>
+            <p class="install-note">Aster keeps its own data in <code class="nw">~/Library/Application Support/Aster</code> and research records inside each project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Questions</h2>
+        </header>
+        <dl class="faq">
+          <div>
+            <dt>Is it free?</dt>
+            <dd>Yes. Aster is open source under the MIT License.</dd>
+          </div>
+          <div>
+            <dt>Which agents does it work with?</dt>
+            <dd>Claude Code and Codex in chat. Any other CLI agent runs in a terminal tab.</dd>
+          </div>
+          <div>
+            <dt>Does my data leave my machine?</dt>
+            <dd>There is no Aster account or hosted service. Agents and research records stay on your computer and the hosts you connect. Agents talk to their own model providers, as they do outside Aster.</dd>
+          </div>
+          <div>
+            <dt>Can I use it on my phone?</dt>
+            <dd>On your phone, use the Paseo app for agent chat; Aster is desktop-only.</dd>
+          </div>
+          <div>
+            <dt>Windows or Linux?</dt>
+            <dd>Not published yet. Current builds are for macOS on Apple Silicon.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="Aster, back to top">
+          <svg class="logo-mark" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" focusable="false"><rect x="1" y="1" width="30" height="30" rx="7.5"/><path d="M16 7.4v17.2M8.6 11.7l14.8 8.6M8.6 20.3l14.8-8.6"/></svg>
+          <span>Aster</span>
+        </a>
+        <p>The agentic development environment for AI researchers.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://github.com/rkdrn79/aster/blob/main/LICENSE">MIT License</a></li>
+        <li><a href="https://github.com/rkdrn79/aster">GitHub</a></li>
+        <li><a href="https://github.com/rkdrn79/aster/blob/main/THIRD_PARTY_NOTICES.md">Third-party licenses</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.remove('no-js');
+      root.classList.add('js');
+
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('nav-menu');
+      function setOpen(open) {
+        toggle.setAttribute('aria-expanded', String(open));
+        root.classList.toggle('nav-open', open);
+      }
+      toggle.addEventListener('click', function () {
+        setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+      menu.addEventListener('click', function (e) {
+        if (e.target.closest('a')) setOpen(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && root.classList.contains('nav-open')) {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      window.matchMedia('(min-width: 720px)').addEventListener('change', function () { setOpen(false); });
+
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+        return new Promise(function (resolve, reject) {
+          var area = document.createElement('textarea');
+          area.value = text;
+          area.setAttribute('readonly', '');
+          area.style.position = 'fixed';
+          area.style.opacity = '0';
+          document.body.appendChild(area);
+          area.select();
+          var ok = document.execCommand('copy');
+          document.body.removeChild(area);
+          ok ? resolve() : reject();
+        });
+      }
+      document.querySelectorAll('[data-copy]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var source = document.getElementById(btn.getAttribute('data-copy'));
+          copyText(source.textContent.trim()).then(function () {
+            btn.textContent = 'Copied';
+          }, function () {
+            btn.textContent = 'Press ⌘C';
+            var range = document.createRange();
+            range.selectNodeContents(source);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+          });
+          setTimeout(function () { btn.textContent = 'Copy'; }, 1800);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
