@@ -425,17 +425,20 @@
       </div>
     </section>
 
-    <section class="section section-tint feature-group" id="compute" aria-labelledby="compute-title">
+    <section class="section section-tint feature-group" id="others" aria-labelledby="others-title">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow">Compute</p>
-          <h2 id="compute-title">Your GPUs and your deadlines.</h2>
-          <p class="lead">SSH hosts, SLURM queues, and GPU budgets across projects, and the conference deadlines you are aiming for.</p>
+          <p class="eyebrow">Others</p>
+          <h2 id="others-title">Compute, Workbench, and the harness.</h2>
+          <p class="lead">The GPUs and deadlines around your projects, the coding workspace, and the CLI your agents use.</p>
         </header>
 
         <div class="features">
-          <article class="feature feature-wide" id="feature-compute" aria-labelledby="compute-title">
+          <article class="feature feature-wide" id="feature-compute" aria-labelledby="feature-compute-title">
             <div class="feature-text">
+              <div class="feature-title">
+                <h3 id="feature-compute-title">Compute and Deadlines</h3>
+              </div>
               <div class="feature-body">
                 <p>SSH hosts, GPUs, and SLURM queues across projects, with a GPU budget per host and project: jobs over budget are submitted held and released in priority order.</p>
                 <p>Conference deadlines from the ccfddl and Hugging Face AI deadlines catalogs, in your time zone.</p>
@@ -449,21 +452,12 @@
               </div>
             </figure>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section feature-group" id="workbench" aria-labelledby="workbench-title">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">Workbench</p>
-          <h2 id="workbench-title">Chats, terminals, and code in one place.</h2>
-          <p class="lead">Agents, terminals, the editor, and Git stay where they are, one switch away from the research view.</p>
-        </header>
-
-        <div class="features">
-          <article class="feature feature-wide" id="feature-code" aria-labelledby="workbench-title">
+          <article class="feature feature-wide" id="feature-code" aria-labelledby="feature-code-title">
             <div class="feature-text">
+              <div class="feature-title">
+                <h3 id="feature-code-title">Workbench and Code layout</h3>
+              </div>
               <div class="feature-body">
                 <p>Chats, terminals, the editor, files, and Git for the project. Switching pages never stops an agent or terminal.</p>
                 <p>The <strong>Research | Code</strong> switch flips the sidebar to a worktree-first layout for pure coding work.</p>
@@ -477,19 +471,19 @@
               </div>
             </figure>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section section-tint" id="harness" aria-labelledby="harness-title">
-      <div class="container harness">
-        <div class="harness-copy">
-          <p class="eyebrow">Research harness</p>
-          <h2 id="harness-title">One small CLI for every experiment.</h2>
-          <p>The harness is a zero-dependency Node CLI that agents call for every experiment. The app ships the same code and imports it at runtime, so the agent and the UI always agree on what a record means.</p>
-        </div>
-        <div class="code-block">
-          <div class="code-head"><span>Terminal</span><button class="copy-btn" type="button" data-copy="harness-code">Copy</button></div>
+          <article class="feature feature-wide" id="feature-harness" aria-labelledby="feature-harness-title">
+            <div class="feature-text">
+              <div class="feature-title">
+                <h3 id="feature-harness-title">Research harness</h3>
+              </div>
+              <div class="feature-body">
+                <p>One small CLI for every experiment. The harness is a zero-dependency Node CLI that agents call to launch Runs and record claims; the app ships the same code and imports it at runtime, so the agent and the UI always agree on what a record means.</p>
+              </div>
+            </div>
+            <div class="feature-media">
+              <div class="code-block">
+                <div class="code-head"><span>Terminal</span><button class="copy-btn" type="button" data-copy="harness-code">Copy</button></div>
 <pre><code id="harness-code">HARNESS=$(aster research harness-path)
 
 <span class="c"># Launch a Run: only this command runs, and its metrics are recorded</span>
@@ -503,6 +497,9 @@ node $HARNESS claim add --text "LoRA reaches 83.0% validation accuracy" \
 
 <span class="c"># verified / stale / mismatch / missing-evidence</span>
 node $HARNESS claim audit</code></pre>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
