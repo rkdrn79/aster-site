@@ -42,6 +42,7 @@
         <span>Aster</span>
       </a>
       <ul class="nav-links" id="nav-menu">
+        <li><a href="#writing">Writing</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#download">Download</a></li>
@@ -61,7 +62,7 @@
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="container hero-copy">
-        <p class="eyebrow-pill"><span class="pill-dot" aria-hidden="true"></span>Aster v0.1.0 · MVP draft for macOS</p>
+        <p class="eyebrow-pill"><span class="pill-dot" aria-hidden="true"></span>Aster v0.1.0 · macOS</p>
         <h1 id="hero-title"><span class="visually-hidden">Aster — </span>The agentic development environment for AI researchers.</h1>
         <p class="hero-sub">Run experiments with coding agents, keep the evidence of every Run, and write the paper beside it — one project, one window.</p>
         <div class="cta">
@@ -81,9 +82,76 @@
       <div class="container hero-shot">
         <div class="window window-hero">
           <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <img class="hero-img-light" loading="lazy" src="assets/hero.jpg" srcset="assets/hero-1600.jpg 1600w, assets/hero.jpg 2400w" sizes="(min-width: 1296px) 1200px, calc(100vw - 40px)" width="2400" height="1500" decoding="async" alt="Aster with a research project open: the Experiment notebook in the middle, with planned Runs, a Needs you list and a results table, and the Experiment agent docked on the right">
-          <img class="hero-img-dark" loading="lazy" src="assets/hero-dark.jpg" srcset="assets/hero-dark-1600.jpg 1600w, assets/hero-dark.jpg 2400w" sizes="(min-width: 1296px) 1200px, calc(100vw - 40px)" width="2400" height="1500" decoding="async" alt="Aster with a research project open: the Experiment notebook in the middle, with planned Runs, a Needs you list and a results table, and the Experiment agent docked on the right">
+          <img class="only-light" loading="lazy" src="assets/hero.jpg" srcset="assets/hero-1600.jpg 1600w, assets/hero.jpg 2400w" sizes="(min-width: 1296px) 1200px, calc(100vw - 40px)" width="2400" height="1500" decoding="async" alt="Aster with a research project open: the Experiment notebook in the middle, with planned Runs, a Needs you list and a results table, and the Experiment agent docked on the right">
+          <img class="only-dark" loading="lazy" src="assets/hero-dark.jpg" srcset="assets/hero-dark-1600.jpg 1600w, assets/hero-dark.jpg 2400w" sizes="(min-width: 1296px) 1200px, calc(100vw - 40px)" width="2400" height="1500" decoding="async" alt="Aster with a research project open: the Experiment notebook in the middle, with planned Runs, a Needs you list and a results table, and the Experiment agent docked on the right">
         </div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="writing" aria-labelledby="writing-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Writing</p>
+          <h2 id="writing-title">Write with your results.</h2>
+          <p class="lead">The paper sits beside the Runs it reports. Select a passage, ask the Writing agent to revise it, and recompile. Every number you record stays tied to the Run, metric, and split it came from, and Aster tells you when one stops matching.</p>
+        </header>
+
+        <figure class="clip">
+          <div class="window">
+            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <video class="only-light" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/writing-revise.jpg" aria-describedby="clip-revise-cap">
+              <source src="assets/clips/writing-revise.webm" type='video/webm; codecs="av01.0.08M.08"'>
+              <source src="assets/clips/writing-revise.mp4" type="video/mp4">
+            </video>
+            <video class="only-dark" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/writing-revise-dark.jpg" aria-describedby="clip-revise-cap">
+              <source src="assets/clips/writing-revise-dark.webm" type='video/webm; codecs="av01.0.08M.08"'>
+              <source src="assets/clips/writing-revise-dark.mp4" type="video/mp4">
+            </video>
+            <button class="clip-toggle" type="button" aria-label="Pause clip" hidden>
+              <svg class="i-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M9 6.5v11M15 6.5v11"/></svg>
+              <svg class="i-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8.5 6.3v11.4l9-5.7z"/></svg>
+            </button>
+          </div>
+          <figcaption class="media-caption clip-caption" id="clip-revise-cap"><strong>Revise with the Writing agent.</strong> The abstract is selected in <code>paper/main.tex</code> and sent with “Lead with the result and give the numbers.” The agent reads the file and edits those lines, the source reloads, and Compile PDF shows the new abstract.</figcaption>
+        </figure>
+
+        <ul class="points">
+          <li>
+            <h3>Select, revise, recompile</h3>
+            <p>Select text in the TeX source or the PDF and choose <strong>Revise</strong>. The request asks the Writing agent to check that the passage is unchanged and edit only it; <strong>Compile PDF</strong> rebuilds with Tectonic.</p>
+          </li>
+          <li>
+            <h3>Numbers backed by Runs</h3>
+            <p>When a result goes into the paper, the agent records a claim that ties the number to a Run’s metric and split. The harness refuses a value that disagrees with the Run.</p>
+          </li>
+          <li>
+            <h3>One-click fixes</h3>
+            <p>The <strong>Claims</strong> drawer marks each number verified, stale, mismatched, or missing evidence. When the paper no longer states its Run’s value, <strong>Update text</strong> writes the current value into the TeX and records it again.</p>
+          </li>
+          <li>
+            <h3>SyncTeX both ways</h3>
+            <p>Double-click the PDF to jump to the source line, or show the editor’s cursor line in the PDF.</p>
+          </li>
+        </ul>
+
+        <figure class="clip">
+          <div class="window">
+            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <video class="only-light" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/writing-claims.jpg" aria-describedby="clip-claims-cap">
+              <source src="assets/clips/writing-claims.webm" type='video/webm; codecs="av01.0.08M.08"'>
+              <source src="assets/clips/writing-claims.mp4" type="video/mp4">
+            </video>
+            <video class="only-dark" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/writing-claims-dark.jpg" aria-describedby="clip-claims-cap">
+              <source src="assets/clips/writing-claims-dark.webm" type='video/webm; codecs="av01.0.08M.08"'>
+              <source src="assets/clips/writing-claims-dark.mp4" type="video/mp4">
+            </video>
+            <button class="clip-toggle" type="button" aria-label="Pause clip" hidden>
+              <svg class="i-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M9 6.5v11M15 6.5v11"/></svg>
+              <svg class="i-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8.5 6.3v11.4l9-5.7z"/></svg>
+            </button>
+          </div>
+          <figcaption class="media-caption clip-caption" id="clip-claims-cap"><strong>Fix a number that no longer matches its Run.</strong> The Claims drawer lists one mismatch, one stale claim, and two verified ones. <em>Update text to 85.8%</em> rewrites line 32 to the Run’s value, the claim turns verified, and the recompiled PDF says 85.8%.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -245,33 +313,65 @@
         </header>
 
         <div class="features">
-          <article class="feature" id="feature-notebook" aria-labelledby="feature-notebook-title">
+          <article class="feature feature-wide" id="feature-notebook" aria-labelledby="feature-notebook-title">
             <div class="feature-text">
-              <p class="feature-num">01</p>
-              <h3 id="feature-notebook-title">Experiment notebook</h3>
-              <p>Each Experiment opens on a notebook: the plan (question, metric, baseline, seeds), <strong>Needs you</strong> (failed Runs, proposals, and findings waiting on a decision), results with mean ± spread per configuration, analyses, and your conclusion.</p>
-              <p>The <strong>Experiment agent</strong> is docked beside it and can design, analyze, explain a failure, or propose the next Run.</p>
+              <div class="feature-title">
+                <p class="feature-num">01</p>
+                <h3 id="feature-notebook-title">Experiment notebook</h3>
+              </div>
+              <div class="feature-body">
+                <p>Each Experiment opens on a notebook: the plan (question, metric, baseline, seeds), <strong>Needs you</strong> (failed Runs, proposals, and findings waiting on a decision), results with mean ± spread per configuration, analyses, and your conclusion.</p>
+                <p>The <strong>Experiment agent</strong> is docked beside it. Ask it to design, analyze, or explain a failure; it proposes the next Run with a reason and the exact command, and you approve or reject it under <strong>Needs you</strong>.</p>
+              </div>
             </div>
-            <figure class="feature-media">
+            <figure class="feature-media clip">
               <div class="window">
                 <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <img src="assets/experiment-notebook.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Experiment notebook with the plan, Needs you, results and analyses, and the Experiment agent on the right">
+                <video class="only-light" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/experiment-analyze.jpg" aria-describedby="clip-experiment-cap">
+                  <source src="assets/clips/experiment-analyze.webm" type='video/webm; codecs="av01.0.08M.08"'>
+                  <source src="assets/clips/experiment-analyze.mp4" type="video/mp4">
+                </video>
+                <video class="only-dark" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/experiment-analyze-dark.jpg" aria-describedby="clip-experiment-cap">
+                  <source src="assets/clips/experiment-analyze-dark.webm" type='video/webm; codecs="av01.0.08M.08"'>
+                  <source src="assets/clips/experiment-analyze-dark.mp4" type="video/mp4">
+                </video>
+                <button class="clip-toggle" type="button" aria-label="Pause clip" hidden>
+                  <svg class="i-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M9 6.5v11M15 6.5v11"/></svg>
+                  <svg class="i-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8.5 6.3v11.4l9-5.7z"/></svg>
+                </button>
               </div>
+              <figcaption class="media-caption clip-caption" id="clip-experiment-cap"><strong>Analyze, then approve.</strong> Analyze starts the Experiment agent, which reads the Experiment and its checks and answers against the plan: +0.27&nbsp;dB, inside seed noise. Approve on the proposed Run in Needs you marks it approved in the plan.</figcaption>
             </figure>
           </article>
 
-          <article class="feature" id="feature-runs" aria-labelledby="feature-runs-title">
+          <article class="feature feature-wide" id="feature-runs" aria-labelledby="feature-runs-title">
             <div class="feature-text">
-              <p class="feature-num">02</p>
-              <h3 id="feature-runs-title">Runs</h3>
-              <p>Live metric curves, the log, config, code patch, and media for every Run.</p>
-              <p>Attach existing JSONL or CSV results, link a SLURM job, or let agents register Runs that Aster picks up on its own.</p>
+              <div class="feature-title">
+                <p class="feature-num">02</p>
+                <h3 id="feature-runs-title">Runs</h3>
+              </div>
+              <div class="feature-body">
+                <p>Live metric curves, the log, config, code patch, and media for every Run. Attach existing JSONL or CSV results, link a SLURM job, or let agents register Runs that Aster picks up on its own.</p>
+                <p>Tick Runs in the list and <strong>Compare</strong> lines them up on the same axes.</p>
+              </div>
             </div>
-            <figure class="feature-media">
+            <figure class="feature-media clip">
               <div class="window">
                 <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <img src="assets/runs-chart.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Runs page with three learning-rate Runs and their validation curves">
+                <video class="only-light" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/notebook-runs-compare.jpg" aria-describedby="clip-runs-cap">
+                  <source src="assets/clips/notebook-runs-compare.webm" type='video/webm; codecs="av01.0.08M.08"'>
+                  <source src="assets/clips/notebook-runs-compare.mp4" type="video/mp4">
+                </video>
+                <video class="only-dark" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/notebook-runs-compare-dark.jpg" aria-describedby="clip-runs-cap">
+                  <source src="assets/clips/notebook-runs-compare-dark.webm" type='video/webm; codecs="av01.0.08M.08"'>
+                  <source src="assets/clips/notebook-runs-compare-dark.mp4" type="video/mp4">
+                </video>
+                <button class="clip-toggle" type="button" aria-label="Pause clip" hidden>
+                  <svg class="i-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M9 6.5v11M15 6.5v11"/></svg>
+                  <svg class="i-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8.5 6.3v11.4l9-5.7z"/></svg>
+                </button>
               </div>
+              <figcaption class="media-caption clip-caption" id="clip-runs-cap"><strong>Notebook to Runs to Compare.</strong> Open Runs, pick <em>cosine seed 1</em>, and switch its chart to validation PSNR; hovering reads each step. Compare overlays the selected Runs, with every value at the hovered step.</figcaption>
             </figure>
           </article>
 
@@ -285,22 +385,24 @@
             <figure class="feature-media">
               <div class="window">
                 <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <img src="assets/compare.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Compare page with metrics, config differences, and samples side by side">
+                <img class="only-light" src="assets/compare.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Compare page with metrics against the baseline, overlaid validation curves with a hover readout, and config differences">
+                <img class="only-dark" src="assets/compare-dark.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Compare page with metrics against the baseline, overlaid validation curves with a hover readout, and config differences">
               </div>
             </figure>
           </article>
 
-          <article class="feature" id="feature-writing" aria-labelledby="feature-writing-title">
+          <article class="feature" id="feature-writing-claims" aria-labelledby="feature-writing-claims-title">
             <div class="feature-text">
               <p class="feature-num">04</p>
-              <h3 id="feature-writing-title">Writing and Claims</h3>
-              <p>TeX source, the PDF compiled with Tectonic, and a writing agent side by side, with SyncTeX in both directions.</p>
-              <p>The <strong>Claims</strong> drawer marks every recorded number as verified, stale, mismatched, or missing evidence, lists result-like numbers no Run backs, and fixes a stale number in one click.</p>
+              <h3 id="feature-writing-claims-title">Writing and Claims</h3>
+              <p>TeX source, the PDF compiled with Tectonic, and a Writing agent side by side, with SyncTeX in both directions.</p>
+              <p>The <strong>Claims</strong> drawer marks every recorded number as verified, stale, mismatched, or missing evidence, lists result-like numbers no Run backs, and fixes a mismatched number in one click. <a href="#writing">Watch it work</a>.</p>
             </div>
             <figure class="feature-media">
               <div class="window">
                 <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <img src="assets/writing-claims.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Writing page with the TeX source, the compiled PDF, and the Claims drawer">
+                <img class="only-light" src="assets/writing-claims.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Writing page with the TeX source, the compiled PDF, and the Claims drawer showing a mismatch, a stale claim, and two verified claims">
+                <img class="only-dark" src="assets/writing-claims-dark.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Writing page with the TeX source, the compiled PDF, and the Claims drawer showing a mismatch, a stale claim, and two verified claims">
               </div>
             </figure>
           </article>
@@ -315,24 +417,40 @@
             <figure class="feature-media">
               <div class="window">
                 <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <img src="assets/start-loop.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Start research loop dialog with an objective, a metric, and a budget">
+                <img class="only-light" src="assets/start-loop.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Start research loop dialog with an objective, a metric, and a budget">
+                <img class="only-dark" src="assets/start-loop-dark.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Start research loop dialog with an objective, a metric, and a budget">
               </div>
             </figure>
           </article>
 
-          <article class="feature" id="feature-library" aria-labelledby="feature-library-title">
+          <article class="feature feature-wide" id="feature-library" aria-labelledby="feature-library-title">
             <div class="feature-text">
-              <p class="feature-num">06</p>
-              <h3 id="feature-library-title">Library</h3>
-              <p>The project’s papers and PDFs with highlights and notes, arXiv and DOI import, and copyable citations.</p>
-              <p>A reading agent summarizes a paper or relates it to your manuscript and code. Drag the divider to give the PDF or the agent more room.</p>
+              <div class="feature-title">
+                <p class="feature-num">06</p>
+                <h3 id="feature-library-title">Library</h3>
+              </div>
+              <div class="feature-body">
+                <p>The project’s papers and PDFs with highlights and notes, arXiv and DOI import, and copyable citations.</p>
+                <p>Select a passage to highlight it, or choose <strong>Explain</strong>, <strong>Translate</strong>, or <strong>Ask</strong>. The Reading agent answers beside the PDF, and can summarize, critique, or relate the paper to your project.</p>
+              </div>
             </div>
-            <figure class="feature-media">
+            <figure class="feature-media clip">
               <div class="window">
                 <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <img src="assets/library.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Library with a paper’s PDF on the left and the reading agent on the right">
+                <video class="only-light" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/library-explain.jpg" aria-describedby="clip-library-cap">
+                  <source src="assets/clips/library-explain.webm" type='video/webm; codecs="av01.0.08M.08"'>
+                  <source src="assets/clips/library-explain.mp4" type="video/mp4">
+                </video>
+                <video class="only-dark" muted loop playsinline controls preload="none" width="1440" height="900" data-poster="assets/clips/library-explain-dark.jpg" aria-describedby="clip-library-cap">
+                  <source src="assets/clips/library-explain-dark.webm" type='video/webm; codecs="av01.0.08M.08"'>
+                  <source src="assets/clips/library-explain-dark.mp4" type="video/mp4">
+                </video>
+                <button class="clip-toggle" type="button" aria-label="Pause clip" hidden>
+                  <svg class="i-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M9 6.5v11M15 6.5v11"/></svg>
+                  <svg class="i-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8.5 6.3v11.4l9-5.7z"/></svg>
+                </button>
               </div>
-              <figcaption class="media-caption">Library screenshot shows <a href="https://arxiv.org/abs/2305.08891">arXiv:2305.08891</a> (Lin et al.), <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption>
+              <figcaption class="media-caption clip-caption" id="clip-library-cap"><strong>Explain a passage.</strong> A sentence of the abstract is selected in the PDF and Explain sends it to the Reading agent, which answers in the panel. Paper shown: <a href="https://arxiv.org/abs/2305.08891">arXiv:2305.08891</a> (Lin et al.), <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</figcaption>
             </figure>
           </article>
 
@@ -346,7 +464,8 @@
             <figure class="feature-media">
               <div class="window">
                 <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <img src="assets/home.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Aster home with projects, upcoming deadlines, and compute">
+                <img class="only-light" src="assets/home.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Aster home with projects, upcoming deadlines, and compute">
+                <img class="only-dark" src="assets/home-dark.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Aster home with projects, upcoming deadlines, and compute">
               </div>
             </figure>
           </article>
@@ -361,7 +480,8 @@
             <figure class="feature-media">
               <div class="window">
                 <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <img src="assets/code-layout.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Code layout with worktrees in the sidebar, a terminal streaming training metrics, and the file tree">
+                <img class="only-light" src="assets/code-layout.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Code layout with worktrees in the sidebar, a terminal streaming training metrics, and the file tree">
+                <img class="only-dark" src="assets/code-layout-dark.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Code layout with worktrees in the sidebar, a terminal streaming training metrics, and the file tree">
               </div>
             </figure>
           </article>
@@ -546,9 +666,102 @@ node $HARNESS claim audit</code></pre>
         root.setAttribute('data-theme', next);
         try { localStorage.setItem('aster-site-theme', next); } catch (e) {}
         syncThemeButton();
+        syncClips();
       });
-      darkQuery.addEventListener('change', syncThemeButton);
+      darkQuery.addEventListener('change', function () { syncThemeButton(); syncClips(); });
       syncThemeButton();
+
+      // Clips: each figure holds a light and a dark <video>; only the one matching the theme shows.
+      // It plays while on screen and pauses off screen. Reduced motion keeps the poster until clicked.
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var clips = Array.prototype.slice.call(document.querySelectorAll('.clip')).map(function (figure) {
+        var clip = {
+          figure: figure,
+          videos: Array.prototype.slice.call(figure.querySelectorAll('video')),
+          button: figure.querySelector('.clip-toggle'),
+          inView: false,
+          near: false,
+          userPaused: reduceMotion,
+          shown: null
+        };
+        clip.videos.forEach(function (video) {
+          video.removeAttribute('controls');
+          video.muted = true;
+          video.addEventListener('click', function () { toggleClip(clip); });
+        });
+        if (clip.button) {
+          clip.button.hidden = false;
+          clip.button.addEventListener('click', function () { toggleClip(clip); });
+        }
+        syncButton(clip);
+        return clip;
+      });
+      function visibleVideo(clip) {
+        for (var i = 0; i < clip.videos.length; i++) {
+          if (getComputedStyle(clip.videos[i]).display !== 'none') return clip.videos[i];
+        }
+        return clip.videos[0];
+      }
+      function syncButton(clip) {
+        clip.figure.classList.toggle('is-paused', clip.userPaused);
+        if (clip.button) clip.button.setAttribute('aria-label', clip.userPaused ? 'Play clip' : 'Pause clip');
+      }
+      // Posters load only for the variant on screen, once the clip is near the viewport.
+      function ensurePoster(video) {
+        var poster = video.getAttribute('data-poster');
+        if (poster && !video.getAttribute('poster')) video.setAttribute('poster', poster);
+      }
+      function syncClip(clip) {
+        var video = visibleVideo(clip);
+        if (clip.near || clip.inView) ensurePoster(video);
+        clip.videos.forEach(function (other) {
+          if (other !== video && !other.paused) other.pause();
+        });
+        // A theme switch mid-clip continues from the same moment in the other variant.
+        if (clip.shown && clip.shown !== video && clip.shown.readyState > 0) {
+          try { video.currentTime = clip.shown.currentTime; } catch (e) {}
+        }
+        clip.shown = video;
+        if (clip.inView && !clip.userPaused) {
+          var started = video.play();
+          if (started && started.catch) started.catch(function () {});
+        } else if (!video.paused) {
+          video.pause();
+        }
+        syncButton(clip);
+      }
+      function toggleClip(clip) {
+        clip.userPaused = !clip.userPaused;
+        if (!clip.userPaused) clip.inView = true;
+        syncClip(clip);
+      }
+      function syncClips() { clips.forEach(syncClip); }
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            clips.forEach(function (clip) {
+              if (clip.figure !== entry.target) return;
+              clip.inView = entry.isIntersecting && entry.intersectionRatio >= 0.35;
+              syncClip(clip);
+            });
+          });
+        }, { threshold: [0, 0.35, 0.6] });
+        var nearObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            clips.forEach(function (clip) {
+              if (clip.figure !== entry.target || !entry.isIntersecting) return;
+              clip.near = true;
+              ensurePoster(visibleVideo(clip));
+            });
+          });
+        }, { rootMargin: '800px 0px' });
+        clips.forEach(function (clip) {
+          observer.observe(clip.figure);
+          nearObserver.observe(clip.figure);
+        });
+      } else {
+        clips.forEach(function (clip) { clip.inView = true; clip.near = true; syncClip(clip); });
+      }
 
       function copyText(text) {
         if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
