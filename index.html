@@ -42,8 +42,10 @@
         <span>Aster</span>
       </a>
       <ul class="nav-links" id="nav-menu">
-        <li><a href="#features">Features</a></li>
         <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#experiments">Experiments</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#library">Library</a></li>
         <li><a href="#download">Download</a></li>
         <li><a href="https://github.com/rkdrn79/aster" class="nav-gh">GitHub</a></li>
       </ul>
@@ -101,24 +103,9 @@
             <p>Start from a Claude Code or Codex chat. An Experiment groups the results afterwards; it is not a form to fill in before you can talk to an agent.</p>
           </li>
           <li>
-            <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6.5h16M4 12h16M4 17.5h10"/><circle cx="18.5" cy="17.5" r="1.6"/></svg>
-            <h3>Runs with provenance</h3>
-            <p>Every launch records its command, commit, uncommitted diff, host, agent session, log, and metrics. An agent ending its turn never marks a Run as succeeded.</p>
-          </li>
-          <li>
             <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4.5h7.5L19 9v10.5H7z"/><path d="M14.5 4.5V9H19M10 13.5l2 2 3.5-4"/></svg>
-            <h3>Numbers backed by Runs</h3>
-            <p>Each result number in the manuscript can point to a Run, metric, and split. Aster flags numbers that changed, went stale, or have nothing behind them.</p>
-          </li>
-          <li>
-            <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg>
-            <h3>You approve, agents execute</h3>
-            <p>Agents propose the next Run with a reason and the exact command. Only you approve it, and the approved command is what runs.</p>
-          </li>
-          <li>
-            <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4.5a5.5 5.5 0 015.5 5.5v3.5l1.5 2.5H5l1.5-2.5V10A5.5 5.5 0 0112 4.5zM10 19a2 2 0 004 0"/></svg>
-            <h3>Agents stop polling</h3>
-            <p>Watches wake an agent when a Run ends, fails, logs NaN, stalls, or crosses a threshold — on your machine or over SSH and SLURM.</p>
+            <h3>Evidence, not assertions</h3>
+            <p>Each Run records what actually ran, each number in the paper points to the Run behind it, and only you approve what runs next.</p>
           </li>
           <li>
             <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="11" rx="1.5"/><path d="M8.5 19.5h7M12 16v3.5"/></svg>
@@ -236,24 +223,23 @@
       </div>
     </section>
 
-    <section class="section" id="features" aria-labelledby="features-title">
+    <section class="section feature-group" id="experiments" aria-labelledby="experiments-title">
       <div class="container">
         <header class="section-head">
-          <p class="eyebrow">Features</p>
-          <h2 id="features-title">From the first chat to the number in the paper.</h2>
-          <p class="lead">Experiments, Runs, the manuscript, the papers it cites, and the GPUs it runs on, side by side in one window.</p>
+          <p class="eyebrow">Experiments</p>
+          <h2 id="experiments-title">Run it, compare it, decide what runs next.</h2>
+          <p class="lead">Every Experiment has a notebook, its Runs, and an agent beside it. Agents propose; you decide what runs.</p>
         </header>
 
         <div class="features">
           <article class="feature feature-wide" id="feature-notebook" aria-labelledby="feature-notebook-title">
             <div class="feature-text">
               <div class="feature-title">
-                <p class="feature-num">01</p>
                 <h3 id="feature-notebook-title">Experiment notebook</h3>
               </div>
               <div class="feature-body">
                 <p>Each Experiment opens on a notebook: the plan (question, metric, baseline, seeds), <strong>Needs you</strong> (failed Runs, proposals, and findings waiting on a decision), results with mean ± spread per configuration, analyses, and your conclusion.</p>
-                <p>The <strong>Experiment agent</strong> is docked beside it. Ask it to design, analyze, or explain a failure; it proposes the next Run with a reason and the exact command, and you approve or reject it under <strong>Needs you</strong>.</p>
+                <p>The <strong>Experiment agent</strong> is docked beside it. Ask it to design, analyze, explain a failure, or propose the next Run.</p>
               </div>
             </div>
             <figure class="feature-media clip">
@@ -279,12 +265,11 @@
           <article class="feature feature-wide" id="feature-runs" aria-labelledby="feature-runs-title">
             <div class="feature-text">
               <div class="feature-title">
-                <p class="feature-num">02</p>
-                <h3 id="feature-runs-title">Runs</h3>
+                <h3 id="feature-runs-title">Runs and Compare</h3>
               </div>
               <div class="feature-body">
                 <p>Live metric curves, the log, config, code patch, and media for every Run. Attach existing JSONL or CSV results, link a SLURM job, or let agents register Runs that Aster picks up on its own.</p>
-                <p>Tick Runs in the list and <strong>Compare</strong> lines them up on the same axes.</p>
+                <p>Tick 2–6 Runs and <strong>Compare</strong> lines them up: differences from the baseline at one precision per column, mismatched units or evaluation conditions, config differences, and outputs — text or image — matched by sample ID. Rate samples blind, A/B, and see how your ratings agree with the agent judge.</p>
               </div>
             </div>
             <figure class="feature-media clip">
@@ -307,31 +292,41 @@
             </figure>
           </article>
 
-          <article class="feature feature-wide" id="feature-compare" aria-labelledby="feature-compare-title">
+          <article class="feature feature-wide" id="feature-loop" aria-labelledby="feature-loop-title">
             <div class="feature-text">
               <div class="feature-title">
-                <p class="feature-num">03</p>
-                <h3 id="feature-compare-title">Compare</h3>
+                <h3 id="feature-loop-title">Research loop</h3>
               </div>
               <div class="feature-body">
-                <p>Line up 2–6 Runs: baseline, last and best values at one precision per column, mismatched units or evaluation conditions, config differences, and model outputs — text or image — matched by sample ID.</p>
-                <p>Rate samples blind, A/B, and see how your ratings agree with the agent judge.</p>
+                <p>Give an agent an objective, a metric, and a budget of Runs and hours. It writes each hypothesis, Run, result, and decision to the loop ledger and launches only through the harness.</p>
+                <p>It stops for you before going over budget or changing the evaluation.</p>
               </div>
             </div>
             <figure class="feature-media">
               <div class="window">
                 <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <img class="only-light" src="assets/compare.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Compare page with metrics against the baseline, overlaid validation curves with a hover readout, and config differences">
-                <img class="only-dark" src="assets/compare-dark.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Compare page with metrics against the baseline, overlaid validation curves with a hover readout, and config differences">
+                <img class="only-light" src="assets/start-loop.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Start research loop dialog with an objective, a metric, and a budget">
+                <img class="only-dark" src="assets/start-loop-dark.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Start research loop dialog with an objective, a metric, and a budget">
               </div>
             </figure>
           </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section section-tint feature-group" id="writing" aria-labelledby="writing-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Writing</p>
+          <h2 id="writing-title">Write with your results.</h2>
+          <p class="lead">The paper sits beside the Runs it reports, and every number stays tied to the Run it came from.</p>
+        </header>
+
+        <div class="features">
           <article class="feature feature-wide" id="feature-writing" aria-labelledby="feature-writing-title">
             <div class="feature-text">
               <div class="feature-title">
-                <p class="feature-num">04</p>
-                <h3 id="feature-writing-title">Writing</h3>
+                <h3 id="feature-writing-title">Revise with the Writing agent</h3>
               </div>
               <div class="feature-body">
                 <p>The paper sits beside the Runs it reports: TeX source, the PDF compiled with Tectonic, and a Writing agent side by side, with SyncTeX in both directions.</p>
@@ -361,12 +356,11 @@
           <article class="feature feature-wide" id="feature-claims" aria-labelledby="feature-claims-title">
             <div class="feature-text">
               <div class="feature-title">
-                <p class="feature-num">05</p>
                 <h3 id="feature-claims-title">Claims</h3>
               </div>
               <div class="feature-body">
-                <p>When a result goes into the paper, the agent records a claim that ties the number to a Run’s metric and split; the harness refuses a value that disagrees with the Run.</p>
-                <p>The <strong>Claims</strong> drawer marks every number as verified, stale, mismatched, or missing evidence and lists result-like numbers no Run backs. When the paper no longer states its Run’s value, <strong>Update text</strong> fixes it in one click.</p>
+                <p>The <strong>Claims</strong> drawer checks every number in the paper against the Run it cites and marks it verified, stale, mismatched, or missing evidence. It also lists result-like numbers that no Run backs.</p>
+                <p>When the paper no longer states its Run’s value, <strong>Update text</strong> fixes it in one click.</p>
               </div>
             </div>
             <figure class="feature-media clip">
@@ -388,33 +382,21 @@
               <figcaption class="media-caption clip-caption" id="clip-claims-cap"><strong>Fix a number that no longer matches its Run.</strong> The Claims drawer lists one mismatch, one stale claim, and two verified ones. <em>Update text to 85.8%</em> rewrites line 32 to the Run’s value, the claim turns verified, and the recompiled PDF says 85.8%.</figcaption>
             </figure>
           </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="feature feature-wide" id="feature-loop" aria-labelledby="feature-loop-title">
-            <div class="feature-text">
-              <div class="feature-title">
-                <p class="feature-num">06</p>
-                <h3 id="feature-loop-title">Research loop</h3>
-              </div>
-              <div class="feature-body">
-                <p>Give an agent an objective, a metric, and a budget of Runs and hours. It writes each hypothesis, Run, result, and decision to the loop ledger and launches only through the harness.</p>
-                <p>It stops for you before going over budget or changing the evaluation.</p>
-              </div>
-            </div>
-            <figure class="feature-media">
-              <div class="window">
-                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <img class="only-light" src="assets/start-loop.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Start research loop dialog with an objective, a metric, and a budget">
-                <img class="only-dark" src="assets/start-loop-dark.jpg" width="1600" height="1000" loading="lazy" decoding="async" alt="Start research loop dialog with an objective, a metric, and a budget">
-              </div>
-            </figure>
-          </article>
+    <section class="section feature-group" id="library" aria-labelledby="library-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Library</p>
+          <h2 id="library-title">Read the papers you build on.</h2>
+          <p class="lead">Each project keeps its own papers, with a reading agent that relates them to your manuscript and code.</p>
+        </header>
 
-          <article class="feature feature-wide" id="feature-library" aria-labelledby="feature-library-title">
+        <div class="features">
+          <article class="feature feature-wide" id="feature-library" aria-labelledby="library-title">
             <div class="feature-text">
-              <div class="feature-title">
-                <p class="feature-num">07</p>
-                <h3 id="feature-library-title">Library</h3>
-              </div>
               <div class="feature-body">
                 <p>The project’s papers and PDFs with highlights and notes, arXiv and DOI import, and copyable citations.</p>
                 <p>Select a passage to highlight it, or choose <strong>Explain</strong>, <strong>Translate</strong>, or <strong>Ask</strong>. The Reading agent answers beside the PDF, and can summarize, critique, or relate the paper to your project.</p>
@@ -439,13 +421,21 @@
               <figcaption class="media-caption clip-caption" id="clip-library-cap"><strong>Explain a passage.</strong> A sentence of the abstract is selected in the PDF and Explain sends it to the Reading agent, which answers in the panel. Paper shown: <a href="https://arxiv.org/abs/2305.08891">arXiv:2305.08891</a> (Lin et al.), <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</figcaption>
             </figure>
           </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="feature feature-wide" id="feature-compute" aria-labelledby="feature-compute-title">
+    <section class="section section-tint feature-group" id="compute" aria-labelledby="compute-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Compute</p>
+          <h2 id="compute-title">Your GPUs and your deadlines.</h2>
+          <p class="lead">SSH hosts, SLURM queues, and GPU budgets across projects, and the conference deadlines you are aiming for.</p>
+        </header>
+
+        <div class="features">
+          <article class="feature feature-wide" id="feature-compute" aria-labelledby="compute-title">
             <div class="feature-text">
-              <div class="feature-title">
-                <p class="feature-num">08</p>
-                <h3 id="feature-compute-title">Compute and Deadlines</h3>
-              </div>
               <div class="feature-body">
                 <p>SSH hosts, GPUs, and SLURM queues across projects, with a GPU budget per host and project: jobs over budget are submitted held and released in priority order.</p>
                 <p>Conference deadlines from the ccfddl and Hugging Face AI deadlines catalogs, in your time zone.</p>
@@ -459,13 +449,21 @@
               </div>
             </figure>
           </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="feature feature-wide" id="feature-code" aria-labelledby="feature-code-title">
+    <section class="section feature-group" id="workbench" aria-labelledby="workbench-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Workbench</p>
+          <h2 id="workbench-title">Chats, terminals, and code in one place.</h2>
+          <p class="lead">Agents, terminals, the editor, and Git stay where they are, one switch away from the research view.</p>
+        </header>
+
+        <div class="features">
+          <article class="feature feature-wide" id="feature-code" aria-labelledby="workbench-title">
             <div class="feature-text">
-              <div class="feature-title">
-                <p class="feature-num">09</p>
-                <h3 id="feature-code-title">Workbench and Code layout</h3>
-              </div>
               <div class="feature-body">
                 <p>Chats, terminals, the editor, files, and Git for the project. Switching pages never stops an agent or terminal.</p>
                 <p>The <strong>Research | Code</strong> switch flips the sidebar to a worktree-first layout for pure coding work.</p>
@@ -489,12 +487,6 @@
           <p class="eyebrow">Research harness</p>
           <h2 id="harness-title">One small CLI for every experiment.</h2>
           <p>The harness is a zero-dependency Node CLI that agents call for every experiment. The app ships the same code and imports it at runtime, so the agent and the UI always agree on what a record means.</p>
-          <ul class="rules">
-            <li><code>run exec</code> runs only the command it is given. Nothing in the harness starts training or decides that a result succeeded; the exit code does.</li>
-            <li>A claim’s value is read from <code>metrics.jsonl</code>. A <code>--value</code> that disagrees with the Run is refused.</li>
-            <li>An agent finding needs evidence, and the harness checks each item against the Run’s files.</li>
-            <li>Only you approve, reject, accept, or dismiss.</li>
-          </ul>
         </div>
         <div class="code-block">
           <div class="code-head"><span>Terminal</span><button class="copy-btn" type="button" data-copy="harness-code">Copy</button></div>
@@ -579,10 +571,6 @@ node $HARNESS claim audit</code></pre>
         </header>
         <dl class="faq">
           <div>
-            <dt>Is it free?</dt>
-            <dd>Yes. Aster is open source under the MIT License.</dd>
-          </div>
-          <div>
             <dt>Which agents does it work with?</dt>
             <dd>Claude Code and Codex in chat. Any other CLI agent runs in a terminal tab.</dd>
           </div>
@@ -644,7 +632,7 @@ node $HARNESS claim audit</code></pre>
           toggle.focus();
         }
       });
-      window.matchMedia('(min-width: 720px)').addEventListener('change', function () { setOpen(false); });
+      window.matchMedia('(min-width: 860px)').addEventListener('change', function () { setOpen(false); });
 
       var themeBtn = document.querySelector('.theme-toggle');
       var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
