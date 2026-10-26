@@ -1173,6 +1173,7 @@ h2 {
   font-size: 1.2rem;
   letter-spacing: -0.015em;
 }
+.install-card .install-subtitle { margin-top: 32px; }
 
 .install-steps {
   display: grid;
