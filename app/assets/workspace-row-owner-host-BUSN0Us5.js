@@ -1,0 +1,1 @@
+import{AM as e,PA as t,gN as n,mM as r}from"./store-vxooh46X.js";import{s as i}from"./execution-host-CWlLMrqi.js";function a(a,o){let s=n(o);if(s?.type===`folder`){let e=r(a).find(({id:e})=>e===s.folderWorkspaceId);return e?t(e,a.projectGroups):null}let c=s?.type===`worktree`?s.worktreeId:o,l=a.repos.find(({id:t})=>t===e(c));return l?i(l):null}export{a as t};

@@ -1,0 +1,1 @@
+var e=.5;function t(t,n){if(n===`reset`)return 0;let r=n===`in`?t+e:t-e;return Math.max(-3,Math.min(5,r))}function n(e){return 1.2**e}export{t as n,n as r,e as t};

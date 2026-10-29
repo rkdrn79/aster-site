@@ -1,0 +1,1 @@
+import{gm as e}from"./store-vxooh46X.js";function t(t){return`${e(t)} Chat`}export{t};
