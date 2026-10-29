@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Set up Aster on your phone · Aster</title>
+  <meta name="description" content="Open an SSH server’s Aster projects on your phone through a free relay you deploy yourself: deploy the relay, turn it on in Aster, scan the QR code, and add Aster to your Home Screen.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f9f8f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101216" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://rkdrn79.github.io/aster-site/phone.html">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png">
+  <script>
+    try { var t = localStorage.getItem('aster-site-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aster">
+  <meta property="og:title" content="Set up Aster on your phone">
+  <meta property="og:description" content="Open an SSH server’s Aster projects on your phone through a free relay you deploy yourself.">
+  <meta property="og:url" content="https://rkdrn79.github.io/aster-site/phone.html">
+  <meta property="og:image" content="https://rkdrn79.github.io/aster-site/assets/og.jpg">
+  <meta property="og:image:alt" content="Aster showing an Experiment notebook with the Experiment agent docked on the right">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="index.html" aria-label="Aster home">
+        <svg class="logo-mark" viewBox="0 0 32 32" width="24" height="24" aria-hidden="true" focusable="false"><rect x="1" y="1" width="30" height="30" rx="7.5"/><path d="M16 7.4v17.2M8.6 11.7l14.8 8.6M8.6 20.3l14.8-8.6"/></svg>
+        <span>Aster</span>
+      </a>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html#how-it-works">How it works</a></li>
+        <li><a href="index.html#experiments">Experiments</a></li>
+        <li><a href="index.html#writing">Writing</a></li>
+        <li><a href="index.html#library">Library</a></li>
+        <li><a href="phone.html" aria-current="page">Phone</a></li>
+        <li><a href="index.html#others">Others</a></li>
+        <li><a href="index.html#download">Download</a></li>
+        <li><a href="https://github.com/rkdrn79/aster" class="nav-gh">GitHub</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme">
+        <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="visually-hidden">Menu</span>
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path class="i-open" d="M4 7h16M4 12h16M4 17h16"/><path class="i-close" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" class="guide">
+    <div class="container">
+      <header class="guide-head">
+        <a class="guide-back" href="index.html#phone">← Back to Aster</a>
+        <p class="eyebrow">Phone access · Setup guide</p>
+        <h1>Set up Aster on your phone</h1>
+        <p class="lead">Your phone opens an SSH server’s projects through a relay you deploy yourself, so it keeps working while your Mac is off. It takes about ten minutes, once.</p>
+      </header>
+
+      <section class="guide-card" aria-labelledby="needs-title">
+        <h2 id="needs-title">What you need</h2>
+        <ul class="req-list">
+          <li><span class="req-tag">Required</span><span>Aster 1.0.6 or later on your Mac, with at least one SSH server added.</span></li>
+          <li><span class="req-tag">Required</span><span>A free Cloudflare account. You don’t need to add a payment method.</span></li>
+          <li><span class="req-tag">Required</span><span>Git and Node.js on the computer you deploy the relay from.</span></li>
+          <li><span class="req-tag">Required</span><span>A phone with a current browser. The steps below use an iPhone and Safari.</span></li>
+        </ul>
+      </section>
+
+      <ol class="guide-steps">
+        <li>
+          <h2 id="deploy">Deploy your relay</h2>
+          <p>Create a Cloudflare account without adding a payment method. Then get the relay from the Aster source and deploy it to the Workers Free plan:</p>
+          <div class="code-block">
+            <div class="code-head"><span>Terminal</span><button class="copy-btn" type="button" data-copy="relay-code">Copy</button></div>
+<pre><code id="relay-code">git clone --depth 1 https://github.com/rkdrn79/aster.git
+cd aster/relay
+npm install
+npx wrangler login
+npm run deploy                       <span class="c"># prints https://aster-relay.&lt;subdomain&gt;.workers.dev</span>
+mkdir -p ~/.config/aster-relay
+node -e "process.stdout.write(require('crypto').randomBytes(32).toString('base64url'))" &gt; ~/.config/aster-relay/relay-key
+chmod 600 ~/.config/aster-relay/relay-key
+npx wrangler secret put RELAY_KEY &lt; ~/.config/aster-relay/relay-key
+curl https://aster-relay.&lt;subdomain&gt;.workers.dev/health   <span class="c"># {"status":"ok"}</span>
+echo "wss://aster-relay.&lt;subdomain&gt;.workers.dev/ws?key=$(cat ~/.config/aster-relay/relay-key)"</code></pre>
+          </div>
+          <p>Replace <code>&lt;subdomain&gt;</code> with the one <code>npm run deploy</code> printed. The last line prints your <strong>relay URL</strong>; you paste it into Aster in the next step.</p>
+          <p>Idle connections hibernate and keepalive pings are free, so personal use stays within the free plan. Without a payment method, going over the free daily limits makes the relay refuse requests until 00:00&nbsp;UTC; it never charges you.</p>
+        </li>
+        <li>
+          <h2 id="turn-on">Turn it on in Aster</h2>
+          <p>In Aster, open <strong>Research → Home</strong> and choose <strong>Phone</strong>. Paste the relay URL once, then choose <strong>Turn on</strong> for each SSH server you want on your phone. The server keeps the setting and rejoins the relay after a restart, without your Mac.</p>
+          <p>If a server runs an older Aster, the dialog says so; update it under <strong>Settings → SSH</strong> and try again. On a host without the desktop app, <code>aster serve --relay '&lt;relay URL&gt;'</code> prints the same QR code in the terminal.</p>
+        </li>
+        <li>
+          <h2 id="scan">Scan the QR code</h2>
+          <p>Choose <strong>Phone QR</strong> next to the server. Scan the code with the phone’s camera and open the link in Safari. Aster opens on that server’s projects.</p>
+        </li>
+        <li>
+          <h2 id="home-screen">Add Aster to the Home Screen</h2>
+          <p>In Safari, tap <strong>Share → Add to Home Screen</strong>. Aster gets its own icon and opens full screen, with tabs for Home, Agents, Runs and Files.</p>
+        </li>
+        <li>
+          <h2 id="paste">Paste the link once in the Home Screen app</h2>
+          <p>Open Aster from the Home Screen. It doesn’t share Safari’s storage, so the first time it shows <strong>Connect to Aster</strong>. Paste the pairing link into <strong>Pairing URL or code</strong> and tap <strong>Connect</strong>. After that it opens straight to your server.</p>
+          <p>To get the link onto the phone, choose <strong>Copy link</strong> in Aster’s Phone dialog; with Universal Clipboard, an iPhone signed in to the same Apple ID can paste it. You can also scan the QR code again and copy the link from the camera’s preview.</p>
+        </li>
+      </ol>
+
+      <section class="guide-note" aria-labelledby="security-title">
+        <h2 id="security-title">Keep the link and the relay URL private</h2>
+        <p><strong>The pairing link is a credential.</strong> Anyone with the link or the QR code can open that server’s projects, agents and terminals from their own browser. Don’t post it, share a screenshot of it, or paste it into an issue.</p>
+        <ul>
+          <li>Choosing <strong>Phone QR</strong> again makes a new code and retires the last one. Do that if a link leaks.</li>
+          <li>Keep the relay URL private too: its key keeps others off your relay and your free quota. To change the key, run <code>npx wrangler secret put RELAY_KEY</code> with a new one and paste the new URL into Aster.</li>
+          <li><strong>Turn off</strong> in the Phone dialog stops phone access to that server.</li>
+          <li>The relay only forwards end-to-end encrypted frames and never sees your files or terminals in plain text.</li>
+        </ul>
+      </section>
+
+      <section class="guide-section" aria-labelledby="limits-title">
+        <h2 id="limits-title">Good to know</h2>
+        <ul>
+          <li>Phone access is <strong>experimental</strong>.</li>
+          <li>It covers SSH servers and hosts that run <code>aster serve --relay</code>. Projects that live only on your Mac don’t appear on the phone.</li>
+          <li>On the phone you get Home, Agents, Runs and Files, including the project’s papers. Experiment notebooks, Compare, the Library page, Compute and Deadlines stay in the desktop app.</li>
+          <li>There is no native app. The phone loads the Aster web client from this site and talks to your server only through your relay.</li>
+          <li>More detail, including the relay source and its changes, is in <a href="https://github.com/rkdrn79/aster/blob/main/relay/README.md"><code>relay/README.md</code></a>.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Aster home">
+          <svg class="logo-mark" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" focusable="false"><rect x="1" y="1" width="30" height="30" rx="7.5"/><path d="M16 7.4v17.2M8.6 11.7l14.8 8.6M8.6 20.3l14.8-8.6"/></svg>
+          <span>Aster</span>
+        </a>
+        <p>The agentic development environment for AI researchers.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://github.com/rkdrn79/aster/blob/main/LICENSE">MIT License</a></li>
+        <li><a href="https://github.com/rkdrn79/aster">GitHub</a></li>
+        <li><a href="https://github.com/rkdrn79/aster/blob/main/THIRD_PARTY_NOTICES.md">Third-party licenses</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.remove('no-js');
+      root.classList.add('js');
+
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.getElementById('nav-menu');
+      function setOpen(open) {
+        toggle.setAttribute('aria-expanded', String(open));
+        root.classList.toggle('nav-open', open);
+      }
+      toggle.addEventListener('click', function () {
+        setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+      menu.addEventListener('click', function (e) {
+        if (e.target.closest('a')) setOpen(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && root.classList.contains('nav-open')) {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      window.matchMedia('(min-width: 860px)').addEventListener('change', function () { setOpen(false); });
+
+      var themeBtn = document.querySelector('.theme-toggle');
+      var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      function effectiveTheme() {
+        return root.getAttribute('data-theme') || (darkQuery.matches ? 'dark' : 'light');
+      }
+      function syncThemeButton() {
+        var next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+        themeBtn.setAttribute('aria-label', 'Switch to ' + next + ' theme');
+      }
+      themeBtn.addEventListener('click', function () {
+        var next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('aster-site-theme', next); } catch (e) {}
+        syncThemeButton();
+      });
+      darkQuery.addEventListener('change', syncThemeButton);
+      syncThemeButton();
+
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+        return new Promise(function (resolve, reject) {
+          var area = document.createElement('textarea');
+          area.value = text;
+          area.setAttribute('readonly', '');
+          area.style.position = 'fixed';
+          area.style.opacity = '0';
+          document.body.appendChild(area);
+          area.select();
+          var ok = document.execCommand('copy');
+          document.body.removeChild(area);
+          ok ? resolve() : reject();
+        });
+      }
+      document.querySelectorAll('[data-copy]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var source = document.getElementById(btn.getAttribute('data-copy'));
+          copyText(source.textContent.trim()).then(function () {
+            btn.textContent = 'Copied';
+          }, function () {
+            btn.textContent = 'Press ⌘C';
+            var range = document.createRange();
+            range.selectNodeContents(source);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+          });
+          setTimeout(function () { btn.textContent = 'Copy'; }, 1800);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

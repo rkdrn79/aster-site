@@ -46,6 +46,7 @@
         <li><a href="#experiments">Experiments</a></li>
         <li><a href="#writing">Writing</a></li>
         <li><a href="#library">Library</a></li>
+        <li><a href="#phone">Phone</a></li>
         <li><a href="#others">Others</a></li>
         <li><a href="#download">Download</a></li>
         <li><a href="https://github.com/rkdrn79/aster" class="nav-gh">GitHub</a></li>
@@ -430,7 +431,79 @@
       </div>
     </section>
 
-    <section class="section section-tint feature-group" id="others" aria-labelledby="others-title">
+    <section class="section section-tint feature-group" id="phone" aria-labelledby="phone-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Phone</p>
+          <h2 id="phone-title">Your research on your phone.</h2>
+          <p class="lead">See which agents are waiting on you, answer them, and check your Runs from anywhere. Your phone opens a server’s projects through a relay you own, so it keeps working while your Mac is off. Aster runs as a web app on your Home Screen: no App Store, no Aster account.</p>
+        </header>
+
+        <ul class="phone-row">
+          <li>
+            <figure class="phone-shot">
+              <div class="phone-frame">
+                <img class="only-light" src="assets/phone-home.webp" width="600" height="1006" loading="lazy" decoding="async" alt="Aster on a phone, Home tab: a review agent marked Needs you, then the project proj with one agent needing you, one working and six idle, and its Run rank 64 running at validation accuracy 0.8577">
+                <img class="only-dark" src="assets/phone-home-dark.webp" width="600" height="1006" loading="lazy" decoding="async" alt="Aster on a phone, Home tab: a review agent marked Needs you, then the project proj with one agent needing you, one working and six idle, and its Run rank 64 running at validation accuracy 0.8577">
+              </div>
+              <figcaption><strong>Agents waiting on you</strong>Home puts what needs an answer first. Open a session to reply or approve, with Esc, Tab, arrows and Ctrl-C a tap away.</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="phone-shot">
+              <div class="phone-frame">
+                <img class="only-light" src="assets/phone-agent.webp" width="600" height="1006" loading="lazy" decoding="async" alt="New agent screen on a phone: workspace proj, a choice of Claude, Codex or a plain terminal, an optional first message, and a Start agent button">
+                <img class="only-dark" src="assets/phone-agent-dark.webp" width="600" height="1006" loading="lazy" decoding="async" alt="New agent screen on a phone: workspace proj, a choice of Claude, Codex or a plain terminal, an optional first message, and a Start agent button">
+              </div>
+              <figcaption><strong>Start and stop agents</strong>Pick a workspace and Claude Code, Codex or a shell, give it a first message, and start. Stop it from the session menu.</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="phone-shot">
+              <div class="phone-frame">
+                <img class="only-light" src="assets/phone-run.webp" width="600" height="1006" loading="lazy" decoding="async" alt="Run detail on a phone for rank 64 in LoRA rank ablation: running on demo-host, with val acc 0.8577, train loss 0.3642 and val loss 0.4076 at step 600, and the end of train.log">
+                <img class="only-dark" src="assets/phone-run-dark.webp" width="600" height="1006" loading="lazy" decoding="async" alt="Run detail on a phone for rank 64 in LoRA rank ablation: running on demo-host, with val acc 0.8577, train loss 0.3642 and val loss 0.4076 at step 600, and the end of train.log">
+              </div>
+              <figcaption><strong>Runs and metrics</strong>Every Run on the server, running first. Open one for its latest metrics and the end of its log.</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="phone-shot">
+              <div class="phone-frame">
+                <img class="only-light" src="assets/phone-files.webp" width="600" height="1006" loading="lazy" decoding="async" alt="Files tab on a phone for the project proj, with Files and Papers switches and the folders .aster, paper and scripts">
+                <img class="only-dark" src="assets/phone-files-dark.webp" width="600" height="1006" loading="lazy" decoding="async" alt="Files tab on a phone for the project proj, with Files and Papers switches and the folders .aster, paper and scripts">
+              </div>
+              <figcaption><strong>Files and papers</strong>Browse the project, read the code an agent just changed, and open the PDFs in your Library.</figcaption>
+            </figure>
+          </li>
+        </ul>
+
+        <ul class="points points-3 phone-points">
+          <li>
+            <h3>Works while your Mac is off</h3>
+            <p>The phone talks to your SSH server, not to your Mac. The server keeps phone access on and rejoins the relay after a restart.</p>
+          </li>
+          <li>
+            <h3>Your own free relay</h3>
+            <p>Deploy it once to Cloudflare’s Workers Free plan, with no card on file. It forwards only end-to-end encrypted traffic, and a key you hold keeps everyone else out.</p>
+          </li>
+          <li>
+            <h3>Set up in minutes</h3>
+            <p>Turn it on for a server in <strong>Home → Phone</strong>, scan the QR code, and add Aster to your Home Screen.</p>
+          </li>
+        </ul>
+
+        <div class="phone-cta">
+          <a class="btn btn-secondary" href="phone.html">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
+            Phone setup guide
+          </a>
+          <p>Experimental, new in Aster 1.0.6. Works with SSH servers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feature-group" id="others" aria-labelledby="others-title">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow">Others</p>
@@ -509,7 +582,7 @@ node $HARNESS claim audit</code></pre>
       </div>
     </section>
 
-    <section class="section" id="download" aria-labelledby="download-title">
+    <section class="section section-tint" id="download" aria-labelledby="download-title">
       <div class="container">
         <div class="download-hero">
           <svg class="download-logo logo-mark" viewBox="0 0 32 32" width="56" height="56" aria-hidden="true" focusable="false"><rect x="1" y="1" width="30" height="30" rx="7.5"/><path d="M16 7.4v17.2M8.6 11.7l14.8 8.6M8.6 20.3l14.8-8.6"/></svg>
@@ -571,7 +644,7 @@ node $HARNESS claim audit</code></pre>
       </div>
     </section>
 
-    <section class="section section-tint" id="faq" aria-labelledby="faq-title">
+    <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow">FAQ</p>
@@ -584,11 +657,11 @@ node $HARNESS claim audit</code></pre>
           </div>
           <div>
             <dt>Does my data leave my machine?</dt>
-            <dd>There is no Aster account or hosted service. Agents and research records stay on your computer and the hosts you connect. Agents talk to their own model providers, as they do outside Aster.</dd>
+            <dd>There is no Aster account or hosted service. Agents and research records stay on your computer and the hosts you connect. Agents talk to their own model providers, as they do outside Aster. Phone access goes through a relay on your own Cloudflare account, which only forwards end-to-end encrypted traffic.</dd>
           </div>
           <div>
             <dt>Can I use it on my phone?</dt>
-            <dd>On your phone, use the Paseo app for agent chat; Aster is desktop-only.</dd>
+            <dd>Yes, from Aster 1.0.6. Open an SSH server’s projects in Safari or as a Home Screen web app, through a free relay you deploy yourself; it keeps working while your Mac is off. There is no native app. See the <a href="phone.html">phone setup guide</a>.</dd>
           </div>
           <div>
             <dt>Windows or Linux?</dt>
