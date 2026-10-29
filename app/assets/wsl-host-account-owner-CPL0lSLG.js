@@ -1,0 +1,1 @@
+var e={kind:`local`};function t(e,t){if(e.kind!==`environment`)return null;let n=t.find(t=>t.id===e.environmentId)?.orcadDeployment;return n?.kind===`wsl`?n.distro:null}function n(t,n){return n?{target:e,wslHostDistro:n}:{target:t,wslHostDistro:null}}export{t as n,n as t};

@@ -1,0 +1,1 @@
+var e,t;function n(t,n){return e??=new Intl.Collator(void 0,{sensitivity:`base`}),e.compare(t,n)}function r(e,n){return t??=new Intl.Collator(void 0,{numeric:!0}),t.compare(e,n)}export{r as n,n as t};

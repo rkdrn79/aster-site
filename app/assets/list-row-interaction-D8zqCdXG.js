@@ -1,0 +1,1 @@
+function e(e){let t=e.target;return t instanceof Node&&e.currentTarget instanceof Node&&!e.currentTarget.contains(t)}function t(e){return e.target===e.currentTarget?e.key===`Enter`||e.key===` `:!1}export{t as n,e as t};

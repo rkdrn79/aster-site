@@ -1,0 +1,1 @@
+function e(e){let t=e??(typeof navigator>`u`?``:navigator.userAgent);return t.includes(`Mac`)?`finder`:t.includes(`Windows`)?`file-explorer`:`file-manager`}function t(t){switch(e(t)){case`finder`:return`Finder`;case`file-explorer`:return`File Explorer`;case`file-manager`:return`File Manager`}}export{t as n,e as t};

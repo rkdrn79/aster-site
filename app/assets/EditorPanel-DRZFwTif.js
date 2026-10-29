@@ -1,0 +1,1 @@
+export{Dr as default}from"./App-BudftxOV.js";

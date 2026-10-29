@@ -1,0 +1,1 @@
+import{wM as e}from"./store-53KC9W_C.js";function t(){return!e()}function n(e){return t()?e?.experimentalAgentDashboardMode??`in-window`:`in-window`}export{n,t};

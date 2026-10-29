@@ -1,0 +1,1 @@
+function e(){let e=[],t=new WeakMap,n=(e,t,n)=>Math.abs(t-e)<=2||e>n+2&&t>=n-2;return{mark:t=>{e.push(t),e.length>16&&e.shift()},hasPendingScrollOffset:(t,r)=>e.some(e=>n(e,t,r)),consume:(r,i,a)=>{let o=t.get(r);if(o!==void 0)return o;let s=e.findIndex(e=>n(e,i,a));s!==-1&&e.splice(0,s+1);let c=s!==-1;return t.set(r,c),c}}}export{e as t};

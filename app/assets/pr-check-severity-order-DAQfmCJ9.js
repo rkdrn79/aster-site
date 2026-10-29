@@ -1,0 +1,1 @@
+var e=new Map([[`failure`,0],[`timed_out`,0],[`action_required`,0],[`cancelled`,1],[`pending`,2],[`success`,3],[`neutral`,4],[`skipped`,5]]),t=6;function n(n){return e.get(n??`pending`)??t}function r(e){return e.length<2?e.slice():e.map((e,t)=>({check:e,index:t,rank:n(e.conclusion)})).sort((e,t)=>e.rank-t.rank||e.index-t.index).map(({check:e})=>e)}export{r as t};

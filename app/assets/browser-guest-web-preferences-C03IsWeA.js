@@ -1,0 +1,1 @@
+var e=`disableHtmlFullscreenWindowResize=true`,t=`${e},transparent=false`;export{t as n,e as t};

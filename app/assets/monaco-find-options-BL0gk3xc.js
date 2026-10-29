@@ -1,0 +1,1 @@
+var e={addExtraSpaceOnTop:!1,autoFindInSelection:`never`,seedSearchStringFromSelection:`selection`};export{e as t};

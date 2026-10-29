@@ -1,0 +1,1 @@
+var e=`dictation:control`,t=`dictation:focusInput`;function n(t){document.dispatchEvent(new CustomEvent(e,{detail:t}))}export{t as n,n as r,e as t};

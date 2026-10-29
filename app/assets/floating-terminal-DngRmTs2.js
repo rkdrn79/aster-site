@@ -1,0 +1,1 @@
+var e=`orca-toggle-floating-terminal`,t=null;function n(){t=Date.now()}function r(){if(t===null)return!1;let e=t;return t=null,Date.now()-e<=2e3}export{r as n,n as r,e as t};

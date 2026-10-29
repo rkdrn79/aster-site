@@ -1,0 +1,1 @@
+var e=`orca-close-all-context-menus`;export{e as t};

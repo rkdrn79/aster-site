@@ -1,0 +1,1 @@
+var e=604800,t=[`deploying`,`converting`,`connecting`,`updating`,`starting`],n=[`host-newer`,`deferred`,`failed`,`rolled-back`,`no-template`,`migrating`,`check-failed`],r=[`orcad_unavailable`,`relay_terminals_live`,`relay_terminals_unverifiable`,`source_changed`,`deferred`,`refused`,`failed`];export{n as i,t as n,r,e as t};

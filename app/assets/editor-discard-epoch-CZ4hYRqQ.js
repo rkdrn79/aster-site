@@ -1,0 +1,1 @@
+var e=new Map;function t(t){return e.get(t)??0}function n(n){e.set(n,t(n)+1)}var r=class extends Error{constructor(){super(`The edits were discarded before the save was sent.`)}};export{n,t as r,r as t};

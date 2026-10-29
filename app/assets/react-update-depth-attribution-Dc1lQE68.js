@@ -1,0 +1,1 @@
+var e=`unreliable`,t=`attribution`,n=`attribution_note`,r=/Minified React error #185(?!\d)|errors\/185(?!\d)|invariant=185(?!\d)|Maximum update depth exceeded/;function i(e){return typeof e==`string`?e:e instanceof Error||e&&typeof e==`object`&&typeof e.message==`string`?e.message:``}function a(t){return r.test(i(t))?e:void 0}export{a as i,n,e as r,t};

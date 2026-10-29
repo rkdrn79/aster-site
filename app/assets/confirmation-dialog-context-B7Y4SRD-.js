@@ -1,0 +1,1 @@
+import{i as e}from"./rolldown-runtime-COiEfhsA.js";import{t}from"./react-C_39A_FD.js";var n=e(t()),r=(0,n.createContext)(null);function i(){let e=(0,n.useContext)(r);if(!e)throw Error(`useConfirmationDialog must be used inside ConfirmationDialogProvider`);return e}export{i as n,r as t};
