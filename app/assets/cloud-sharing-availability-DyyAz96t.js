@@ -1,0 +1,1 @@
+import{c as e}from"./product-brand-lURKJyf6.js";var t=e.links.artifactsApi!==null,n=t&&e.links.skillShareBase!==null;export{n,t};

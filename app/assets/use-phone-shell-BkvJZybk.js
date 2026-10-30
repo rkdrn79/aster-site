@@ -1,0 +1,1 @@
+import{sp as e}from"./store-Krvg3quT.js";import{n as t,t as n}from"./use-compact-viewport-C1xuxpdM.js";function r(){return t()&&e()}function i(){return e()&&n()}var a=13;function o(e){return i()?Math.min(e,a):e}export{r as n,o as t};

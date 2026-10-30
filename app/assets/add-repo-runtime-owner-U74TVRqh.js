@@ -1,1 +1,0 @@
-import{jN as e}from"./store-vxooh46X.js";import{T as t,t as n,w as r}from"./execution-host-CWlLMrqi.js";function i(e,i){return i?t(i):e===void 0?void 0:e?r(e):n}function a(e,t){let n=i(e,t);return{requireAuthoritative:!0,...n?{executionHostId:n}:{}}}function o(t){return e(t??null)}export{a as n,o as t};

@@ -1,0 +1,1 @@
+import{ZP as e}from"./store-Krvg3quT.js";var t=2048;function n(n,r=t){return e(n,r)}function r(e){return n(e)?null:e}export{n,r as t};

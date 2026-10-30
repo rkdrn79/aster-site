@@ -1,0 +1,1 @@
+import{n as e}from"./store-Krvg3quT.js";import{n as t}from"./use-system-prefers-dark-Cf1B1DnD.js";function n(){let n=e(e=>e.settings?.theme??`system`),r=t();return n===`system`?r:n===`dark`}export{n as t};

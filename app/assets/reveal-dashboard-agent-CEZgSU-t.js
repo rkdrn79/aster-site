@@ -1,0 +1,1 @@
+import{lt as e}from"./App-BA43VHvd.js";function t(t){return e({worktreeId:t.worktreeId,tabId:t.tabId,leafId:t.leafId,executionHostId:t.executionHostId??null})}export{t};

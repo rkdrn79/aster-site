@@ -1,1 +1,0 @@
-import{lt as e}from"./App-C4TuiPxM.js";function t(t){return e({worktreeId:t.worktreeId,tabId:t.tabId,leafId:t.leafId,executionHostId:t.executionHostId??null})}export{t};

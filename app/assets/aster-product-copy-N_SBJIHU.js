@@ -1,1 +1,0 @@
-import{a as e}from"./i18n-xmmP8cCH.js";function t(t,n){return e(t,n)}export{t};
