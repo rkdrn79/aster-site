@@ -1,0 +1,1 @@
+import{i as e}from"./rolldown-runtime-COiEfhsA.js";import{t}from"./react-C_39A_FD.js";import{Fu as n,Iu as r}from"./App-BMDUBFgP.js";var i=e(t()),a=500;function o(e=a){let t=(0,i.useSyncExternalStore)(r,n,n),[o,s]=(0,i.useState)(t);return(0,i.useEffect)(()=>{if(t){s(!0);return}let n=window.setTimeout(()=>s(!1),e);return()=>window.clearTimeout(n)},[e,t]),o}export{o as t};

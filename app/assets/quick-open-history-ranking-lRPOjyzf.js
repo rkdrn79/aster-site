@@ -1,0 +1,1 @@
+import{c as e,d as t}from"./quick-open-file-list-Bc5WNurD.js";function n(n,r,i){let a=new Set(r),o=i.filter(e=>a.has(e)),s=t(n,e(o),o.length),c=new Map(o.map((e,t)=>[e,t]));s.sort((e,t)=>(c.get(e.path)??0)-(c.get(t.path)??0));let l=new Set(s.map(e=>e.path));return[...s,...t(n,e(r)).filter(e=>!l.has(e.path))].slice(0,50)}export{n as t};

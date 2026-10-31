@@ -1,0 +1,1 @@
+import{FA as e,_N as t,hM as n,jM as r}from"./store-Rx8EWyF8.js";import{s as i}from"./execution-host-CWlLMrqi.js";function a(a,o){let s=t(o);if(s?.type===`folder`){let t=n(a).find(({id:e})=>e===s.folderWorkspaceId);return t?e(t,a.projectGroups):null}let c=s?.type===`worktree`?s.worktreeId:o,l=a.repos.find(({id:e})=>e===r(c));return l?i(l):null}export{a as t};

@@ -1,0 +1,1 @@
+import{hP as e}from"./store-Rx8EWyF8.js";function t(t){let n=t.url?e(t.url):null;return n?{type:n.type,number:n.number}:{type:t.type,number:t.number}}export{t};

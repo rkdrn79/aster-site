@@ -1,0 +1,1 @@
+import{_m as e}from"./store-Rx8EWyF8.js";function t(t){return`${e(t)} Chat`}export{t};

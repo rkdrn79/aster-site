@@ -1,1 +1,0 @@
-import{s as e}from"./activate-tab-and-focus-pane-CLh8wO3t.js";function t(t){window.dispatchEvent(new CustomEvent(e,{detail:t}))}export{t};

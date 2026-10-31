@@ -1,0 +1,1 @@
+export{gc as launchResearchChat}from"./App-BMDUBFgP.js";

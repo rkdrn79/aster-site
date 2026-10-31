@@ -1,1 +1,0 @@
-import{n as e}from"./store-Krvg3quT.js";import{t}from"./use-setup-guide-progress-B1i6K-VZ.js";import{n}from"./use-setup-guide-telemetry-BoMS3w0n.js";function r(){let r=e(e=>e.activeModal===`setup-guide`),i=t(!0,!1,!1);return n({progress:i,setupGuideVisible:r}),null}export{r as SetupGuideTelemetryObserver};
