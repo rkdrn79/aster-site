@@ -97,7 +97,7 @@ echo "wss://aster-relay.&lt;subdomain&gt;.workers.dev/ws?key=$(cat ~/.config/ast
         </li>
         <li>
           <h2 id="turn-on">Turn it on in Aster</h2>
-          <p>In Aster, open <strong>Research → Home</strong> and choose <strong>Phone</strong>. Paste the relay URL once, then choose <strong>Turn on</strong> for each SSH server you want on your phone. The server keeps the setting and rejoins the relay after a restart, without your Mac.</p>
+          <p>In Aster, open <strong>Research → Home</strong> and choose <strong>Phone</strong>. If you skipped the step above, <strong>Open setup in a terminal</strong> deploys the relay for you and fills in its URL. Paste the relay URL once, then choose <strong>Turn on</strong> for each SSH server you want on your phone. The server keeps the setting and rejoins the relay after a restart, without your Mac.</p>
           <p>If a server runs an older Aster, the dialog says so; update it under <strong>Settings → SSH</strong> and try again. On a host without the desktop app, <code>aster serve --relay '&lt;relay URL&gt;'</code> prints the same QR code in the terminal.</p>
         </li>
         <li>
@@ -111,7 +111,11 @@ echo "wss://aster-relay.&lt;subdomain&gt;.workers.dev/ws?key=$(cat ~/.config/ast
         <li>
           <h2 id="paste">Paste the link once in the Home Screen app</h2>
           <p>Open Aster from the Home Screen. It doesn’t share Safari’s storage, so the first time it shows <strong>Connect to Aster</strong>. Paste the pairing link into <strong>Pairing URL or code</strong> and tap <strong>Connect</strong>. After that it opens straight to your server.</p>
-          <p>To get the link onto the phone, choose <strong>Copy link</strong> in Aster’s Phone dialog; with Universal Clipboard, an iPhone signed in to the same Apple ID can paste it. You can also scan the QR code again and copy the link from the camera’s preview.</p>
+          <p>To get the link onto the phone, use <strong>Copy link for the Home Screen app</strong> on the card Aster shows on its Home page in Safari, right after you scanned the QR code. Or choose <strong>Copy link</strong> in Aster’s Phone dialog on your Mac; with Universal Clipboard, an iPhone signed in to the same Apple ID can paste it.</p>
+        </li>
+        <li>
+          <h2 id="notify">Turn on notifications</h2>
+          <p>In the Home Screen app, open the <strong>⋯</strong> menu and turn on <strong>Notify me</strong>, then allow notifications. Your phone tells you when an agent needs you or a Run finishes or fails, even with the app closed. This needs iOS 16.4 or later.</p>
         </li>
       </ol>
 
@@ -131,7 +135,8 @@ echo "wss://aster-relay.&lt;subdomain&gt;.workers.dev/ws?key=$(cat ~/.config/ast
         <ul>
           <li>Phone access is <strong>experimental</strong>.</li>
           <li>It covers SSH servers and hosts that run <code>aster serve --relay</code>. Projects that live only on your Mac don’t appear on the phone.</li>
-          <li>On the phone you get Home, Agents, Runs and Files, including the project’s papers. Experiment notebooks, Compare, the Library page, Compute and Deadlines stay in the desktop app.</li>
+          <li>On the phone you get Home (with deadlines and the GPU queue), Agents with the same chat as on your Mac, Runs and Experiments, and Files, including the project’s papers. Experiment notebooks, Compare and the Library page stay in the desktop app.</li>
+          <li>Each server row in the Phone dialog lists its paired phones. <strong>Revoke</strong> cuts one off if a link leaks or you change phones.</li>
           <li>There is no native app. The phone loads the Aster web client from this site and talks to your server only through your relay.</li>
           <li>More detail, including the relay source and its changes, is in <a href="https://github.com/rkdrn79/aster/blob/main/relay/README.md"><code>relay/README.md</code></a>.</li>
         </ul>
