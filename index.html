@@ -45,6 +45,7 @@
         <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#experiments">Experiments</a></li>
         <li><a href="#writing">Writing</a></li>
+        <li><a href="#figures">Figures</a></li>
         <li><a href="#library">Library</a></li>
         <li><a href="#phone">Phone</a></li>
         <li><a href="#others">Others</a></li>
@@ -65,11 +66,11 @@
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="container hero-copy">
-        <p class="eyebrow-pill"><span class="pill-dot" aria-hidden="true"></span>Aster v1.0.7 · macOS + Windows x64 preview</p>
+        <p class="eyebrow-pill"><span class="pill-dot" aria-hidden="true"></span>Aster v1.0.8 · macOS + Windows x64 preview</p>
         <h1 id="hero-title"><span class="visually-hidden">Aster — </span>The agentic development environment for AI researchers.</h1>
         <p class="hero-sub">Run experiments with coding agents, keep the evidence of every Run, and write the paper beside it — one project, one window.</p>
         <div class="cta">
-          <a class="btn btn-primary" href="https://github.com/rkdrn79/aster/releases/download/v1.0.7/Aster-mac-arm64.dmg">
+          <a class="btn btn-primary" href="https://github.com/rkdrn79/aster/releases/download/v1.0.8/Aster-mac-arm64.dmg">
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
             Download for macOS
           </a>
@@ -82,8 +83,8 @@
             View on GitHub
           </a>
         </div>
-        <p class="cta-meta">macOS: Apple Silicon, 12+ · Windows: x64, unsigned preview</p>
-        <p class="cta-links"><a href="https://github.com/rkdrn79/aster/releases/download/v1.0.7/Aster-mac-arm64.zip">Mac ZIP</a><span aria-hidden="true">·</span><a href="https://github.com/rkdrn79/aster/releases/download/v1.0.7/Aster-windows-x64.zip">Windows ZIP</a><span aria-hidden="true">·</span><a href="https://github.com/rkdrn79/aster/releases">All releases</a></p>
+        <p class="cta-meta">macOS: Apple Silicon, 12+ · Windows: x64, unsigned preview (1.0.7)</p>
+        <p class="cta-links"><a href="https://github.com/rkdrn79/aster/releases/download/v1.0.8/Aster-mac-arm64.zip">Mac ZIP</a><span aria-hidden="true">·</span><a href="https://github.com/rkdrn79/aster/releases/download/v1.0.7/Aster-windows-x64.zip">Windows ZIP</a><span aria-hidden="true">·</span><a href="https://github.com/rkdrn79/aster/releases">All releases</a></p>
       </div>
 
       <div class="container hero-shot">
@@ -393,7 +394,98 @@
       </div>
     </section>
 
-    <section class="section feature-group" id="library" aria-labelledby="library-title">
+    <section class="section feature-group" id="figures" aria-labelledby="figures-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Figures</p>
+          <h2 id="figures-title">Draw the paper’s figures with an agent.</h2>
+          <p class="lead">Describe a figure in a sentence, point at the method section, start from a template, or recreate a published figure from its image. The Figure agent draws it on a canvas beside you, checks it at print size, and keeps the script, so the figure can be redrawn.</p>
+        </header>
+
+        <div class="features">
+          <article class="feature feature-wide" id="feature-figures" aria-labelledby="feature-figures-title">
+            <div class="feature-text">
+              <div class="feature-title">
+                <h3 id="feature-figures-title">More than method diagrams</h3>
+              </div>
+              <div class="feature-body">
+                <p>Method diagrams with the data drawn in, data pipelines with counts and examples, motivation and teaser figures, qualitative example grids, illustrated overviews, and reasoning figures such as prompting strategies and agent trajectories.</p>
+                <p>Arrows run only horizontally and vertically, and boxes line up on a grid. Nine color presets come from a study of 73 published figures, badges are line icons rather than emoji, and PDF and SVG export are vector at your page size.</p>
+              </div>
+            </div>
+            <figure class="feature-media">
+              <div class="figure-gallery">
+                <figure class="paper-figure">
+                  <div class="paper-sheet">
+                    <img src="assets/figure-tot.webp" width="1200" height="588" loading="lazy" decoding="async" alt="Four panels comparing input-output prompting, chain of thought, self-consistency with a majority vote over three chains, and Tree of Thoughts, where thoughts marked promising, maybe or hopeless branch into a tree with a backtrack arrow">
+                  </div>
+                  <figcaption><strong>Reasoning figure</strong>Four ways to solve a problem with an LLM, ending in a tree search over thoughts. Paper: Tree of Thoughts, <a href="https://arxiv.org/abs/2305.10601">arXiv:2305.10601</a> (Yao et al.).</figcaption>
+                </figure>
+                <figure class="paper-figure">
+                  <div class="paper-sheet">
+                    <img src="assets/figure-streamingllm.webp" width="1200" height="410" loading="lazy" decoding="async" alt="Four triangular attention grids for dense attention, window attention, sliding window with re-computation, and StreamingLLM, each with its cost and perplexity marked good or bad">
+                  </div>
+                  <figcaption><strong>Method figure with the data drawn in</strong>Which cached tokens each of four attention schemes keeps, with its cost and perplexity. Paper: StreamingLLM, <a href="https://arxiv.org/abs/2309.17453">arXiv:2309.17453</a> (Xiao et al.).</figcaption>
+                </figure>
+                <figure class="paper-figure">
+                  <div class="paper-sheet">
+                    <img src="assets/figure-dpo.webp" width="1200" height="355" loading="lazy" decoding="async" alt="RLHF on the left, where preference data trains a reward model that trains the LM policy with PPO, and DPO on the right, where the same preference data trains the LM policy directly by maximum likelihood">
+                  </div>
+                  <figcaption><strong>Illustrated overview</strong>RLHF trains a reward model and then the policy with PPO; DPO trains the policy on the same preferences directly. Paper: DPO, <a href="https://arxiv.org/abs/2305.18290">arXiv:2305.18290</a> (Rafailov et al.).</figcaption>
+                </figure>
+                <figure class="paper-figure">
+                  <div class="paper-sheet">
+                    <img src="assets/figure-cosmos.webp" width="1200" height="250" loading="lazy" decoding="async" alt="A video curation pipeline in five stages, split, filtering, annotation, dedup and sharding, with example clips, a caption and crossed-out rejected clips">
+                  </div>
+                  <figcaption><strong>Data pipeline</strong>Five stages from raw video to training shards, with example clips at each stage. Paper: Cosmos, <a href="https://arxiv.org/abs/2501.03575">arXiv:2501.03575</a> (NVIDIA).</figcaption>
+                </figure>
+              </div>
+              <figcaption class="media-caption gallery-caption"><strong>Drawn from text alone.</strong> The Figure agent drew each one from a few sentences describing a figure in the paper named, with no image of the original. Shown as exported to PDF; photos are CC0.</figcaption>
+            </figure>
+          </article>
+
+          <article class="feature feature-wide" id="feature-figure-agent" aria-labelledby="feature-figure-agent-title">
+            <div class="feature-text">
+              <div class="feature-title">
+                <h3 id="feature-figure-agent-title">Draw with the agent, finish by hand</h3>
+              </div>
+              <div class="feature-body">
+                <p>A status chip shows what the agent is doing. After each turn, <strong>Show changes</strong> and <strong>Undo turn</strong> appear; <strong>History</strong> keeps versions to compare or restore, and <strong>Variants&nbsp;×3</strong> draws three to choose from. When you and the agent edit the same figure, changes merge element by element.</p>
+                <p>Select part of a figure and <strong>Ask</strong> (⌘K), or draw an area and <strong>Generate</strong> inside it. By hand, labels follow their box, arrows re-route at right angles, and double-clicking math edits its TeX.</p>
+              </div>
+            </div>
+            <figure class="feature-media">
+              <div class="window">
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <img class="only-light" src="assets/figures-page.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="The Figures page: the project’s figures as thumbnails on the left, a Self-Instruct method figure on the canvas with the figure toolbar, and the Figure agent pane on the right offering Draw from Method, Recreate from image and Start from a template">
+                <img class="only-dark" src="assets/figures-page-dark.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="The Figures page: the project’s figures as thumbnails on the left, a Self-Instruct method figure on the canvas with the figure toolbar, and the Figure agent pane on the right offering Draw from Method, Recreate from image and Start from a template">
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <ul class="points figures-points">
+          <li>
+            <h3>Inspector and parts</h3>
+            <p>The <strong>Inspector</strong> (⌘I) sets roles, position and size in points, photo replace and crop, and line styles. <strong>Insert</strong> (I) has parts, icons, templates and the parts you saved.</p>
+          </li>
+          <li>
+            <h3>Paper colors</h3>
+            <p>Color presets, accent swatches or any hex, with grayscale and deuteranopia previews to check the figure in print and for color-blind readers.</p>
+          </li>
+          <li>
+            <h3>Page sizes</h3>
+            <p>Single and double column at ICML, CVPR, ACL, NeurIPS and arXiv. <strong>Export</strong> PDF, SVG, or PNG (300 or 600&nbsp;dpi), with a transparent background or only the selection.</p>
+          </li>
+          <li>
+            <h3>Use in paper</h3>
+            <p>Inserts the <code>\includegraphics</code> block, with caption and label, into Writing. The figure list marks what is in the paper and which exports are out of date.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-tint feature-group" id="library" aria-labelledby="library-title">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow">Library</p>
@@ -432,7 +524,7 @@
       </div>
     </section>
 
-    <section class="section section-tint feature-group" id="phone" aria-labelledby="phone-title">
+    <section class="section feature-group" id="phone" aria-labelledby="phone-title">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow">Phone</p>
@@ -590,7 +682,7 @@ node $HARNESS claim audit</code></pre>
           <h2 id="download-title">Download Aster</h2>
           <p class="lead">Free and open source under the MIT License.</p>
           <div class="cta">
-            <a class="btn btn-primary" href="https://github.com/rkdrn79/aster/releases/download/v1.0.7/Aster-mac-arm64.dmg">
+            <a class="btn btn-primary" href="https://github.com/rkdrn79/aster/releases/download/v1.0.8/Aster-mac-arm64.dmg">
               <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>
               Download for macOS
             </a>
@@ -603,8 +695,8 @@ node $HARNESS claim audit</code></pre>
               View on GitHub
             </a>
           </div>
-          <p class="cta-meta">macOS: Apple Silicon, 12+ · Windows: x64, unsigned preview</p>
-          <p class="cta-links"><a href="https://github.com/rkdrn79/aster/releases/download/v1.0.7/Aster-mac-arm64.zip">Mac ZIP</a><span aria-hidden="true">·</span><a href="https://github.com/rkdrn79/aster/releases/download/v1.0.7/Aster-windows-x64.zip">Windows ZIP</a><span aria-hidden="true">·</span><a href="https://github.com/rkdrn79/aster/releases">All releases</a></p>
+          <p class="cta-meta">macOS: Apple Silicon, 12+ · Windows: x64, unsigned preview (1.0.7)</p>
+          <p class="cta-links"><a href="https://github.com/rkdrn79/aster/releases/download/v1.0.8/Aster-mac-arm64.zip">Mac ZIP</a><span aria-hidden="true">·</span><a href="https://github.com/rkdrn79/aster/releases/download/v1.0.7/Aster-windows-x64.zip">Windows ZIP</a><span aria-hidden="true">·</span><a href="https://github.com/rkdrn79/aster/releases">All releases</a></p>
         </div>
 
         <div class="install">

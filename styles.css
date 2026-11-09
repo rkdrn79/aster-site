@@ -242,6 +242,11 @@ code,
   font-size: 0.85em;
   opacity: 0.7;
 }
+/* every link still fits in one row just above the menu breakpoint */
+@media (min-width: 860px) and (max-width: 1023px) {
+  .nav-links { gap: 0; }
+  .nav-links a { padding-inline: 8px; }
+}
 
 .theme-toggle {
   display: inline-flex;
@@ -1169,6 +1174,68 @@ h2 {
   .phone-shot figcaption strong { font-size: 14.5px; }
   .phone-cta .btn { width: 100%; }
 }
+
+/* ---------- Figures ---------- */
+
+/* Each figure and its caption take two rows, so the sheets in a row share a height and the
+   captions start on one line. */
+.figure-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 clamp(20px, 3vw, 36px);
+}
+.paper-figure {
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  row-gap: 16px;
+  margin: 0 0 clamp(32px, 4.5vw, 48px);
+}
+/* figures are drawn for the printed page, so they sit on white paper in both themes */
+.paper-sheet {
+  display: flex;
+  align-items: center;
+  padding: clamp(10px, 2vw, 22px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+.paper-sheet img { width: 100%; }
+.paper-figure figcaption {
+  color: var(--fg-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+.paper-figure figcaption strong {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--fg);
+  font-size: 15px;
+  font-weight: 620;
+  letter-spacing: -0.01em;
+}
+.paper-figure figcaption a { color: var(--fg-muted); }
+.paper-figure figcaption a:hover { color: var(--fg); }
+.gallery-caption {
+  max-width: 50rem;
+  margin: 0 auto;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+.gallery-caption strong { color: var(--fg); font-weight: 600; }
+
+.figures-points { margin-top: clamp(56px, 8vw, 88px); }
+.points code { font-size: 0.9em; }
+
+@media (max-width: 767px) {
+  .figure-gallery { grid-template-columns: minmax(0, 1fr); }
+  .paper-figure { row-gap: 12px; }
+}
+
+/* Two untinted sections in a row get the hairline a tinted one would have. */
+.section:not(.section-tint) + .section:not(.section-tint) { border-top: 1px solid var(--border); }
 
 /* ---------- Guide page ---------- */
 
