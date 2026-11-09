@@ -13,3 +13,6 @@ Only update downloads as part of a user-requested Aster release. Prepare the dis
 both macOS and Windows download links for the same tag. Verify that all linked assets are attached
 to that GitHub Release before publishing this site change. A release is complete only after the
 GitHub Release and the live site both serve the new version for both platforms.
+
+
+Exception for 1.0.8: the macOS links point to v1.0.8 and the Windows links stay on v1.0.7, because the Windows build for 1.0.8 did not pass its tests. Move them to the same tag again with the next release that has Windows assets.
