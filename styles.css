@@ -243,7 +243,7 @@ code,
   opacity: 0.7;
 }
 /* every link still fits in one row just above the menu breakpoint */
-@media (min-width: 860px) and (max-width: 1023px) {
+@media (min-width: 960px) and (max-width: 1099px) {
   .nav-links { gap: 0; }
   .nav-links a { padding-inline: 8px; }
 }
@@ -290,7 +290,7 @@ code,
 .nav-open .nav-toggle .i-open { display: none; }
 .nav-open .nav-toggle .i-close { display: inline; }
 
-@media (max-width: 859px) {
+@media (max-width: 959px) {
   .js .nav-toggle { display: inline-flex; margin-left: -16px; }
   .js .theme-toggle { margin-left: auto; }
   .js .nav-links {
