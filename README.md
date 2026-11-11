@@ -15,4 +15,4 @@ to that GitHub Release before publishing this site change. A release is complete
 GitHub Release and the live site both serve the new version for both platforms.
 
 
-Exception since 1.0.8: the macOS links point to the newest macOS release (now v1.1.0) and the Windows links stay on v1.0.7, because the Windows build for 1.0.8 did not pass its tests and 1.1.0 shipped for macOS only. Move them to the same tag again with the next release that has Windows assets.
+Exception since 1.0.8: the macOS links point to the newest macOS release (now v1.1.1) and the Windows links stay on v1.0.7, because the Windows build for 1.0.8 did not pass its tests and 1.1.0 and 1.1.1 shipped for macOS only. Move them to the same tag again with the next release that has Windows assets.
