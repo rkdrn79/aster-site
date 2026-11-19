@@ -1,0 +1,1 @@
+import{a as e}from"./i18n-wmcpngfO.js";function t(t,n){return e(t,n)}export{t};

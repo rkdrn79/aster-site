@@ -1,0 +1,1 @@
+import{lt as e}from"./App-BDu1BP9T.js";function t(t){return e({worktreeId:t.worktreeId,tabId:t.tabId,leafId:t.leafId,executionHostId:t.executionHostId??null})}export{t};

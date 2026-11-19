@@ -1,0 +1,1 @@
+export{yi as default}from"./App-BDu1BP9T.js";

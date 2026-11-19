@@ -1,0 +1,1 @@
+import{QE as e,Ux as t,mS as n,n as r}from"./store-CMUo9lZJ.js";import{t as i}from"./web-runtime-session-tab-lifecycle-0QjaQIs2.js";function a(a,o,s){let c=r.getState(),l=e(c,a);l&&n(l)&&i({worktreeId:a,tabId:o,environmentId:l,leafId:s,expectedCurrentLocalTabId:t(c,a)})}export{a as t};

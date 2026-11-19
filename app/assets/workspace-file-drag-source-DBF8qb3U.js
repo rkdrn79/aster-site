@@ -1,1 +1,0 @@
-import{YE as e,n as t,yA as n}from"./store-Rx8EWyF8.js";import{w as r,x as i}from"./execution-host-CWlLMrqi.js";import{u as a}from"./workspace-file-drag-BLUwWSRP.js";function o(o,s){let c=t.getState(),l=n(c,{workspaceId:s});if(l.kind===`ambiguous`)return;let u=e(c,s),d=l.environmentId,f=u===`local`&&d?r(d):u;a(o,s,f,i(u)?.kind===`ssh`?d:void 0)}export{o as t};
