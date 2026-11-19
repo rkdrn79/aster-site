@@ -1,0 +1,1 @@
+export{Vn as sendFigureQuickRequest}from"./App-CircAQtQ.js";

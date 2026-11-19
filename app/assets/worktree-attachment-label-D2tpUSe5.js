@@ -1,0 +1,1 @@
+import{mI as e}from"./store-B2bxoDYN.js";function t(t){return t.displayName.trim()||n(t.branch)||e(t.path)||t.path}function n(e){let t=e?.trim();return t?t.startsWith(`refs/heads/`)?t.slice(11):t:null}export{t};

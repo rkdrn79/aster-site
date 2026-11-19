@@ -1,1 +1,0 @@
-import{n as e}from"./rolldown-runtime-COiEfhsA.js";var t=e({buildPdfJsDocumentOptions:()=>n});function n(e,t){return{data:e,enableHWA:!0,cMapUrl:new URL(`cmaps/`,t).href,cMapPacked:!0,standardFontDataUrl:new URL(`standard_fonts/`,t).href,wasmUrl:new URL(`wasm/`,t).href}}export{t as n,n as t};
