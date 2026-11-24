@@ -1,0 +1,1 @@
+import{a as e}from"./i18n-MgF3fi-7.js";function t(t,n){return e(t,n)}export{t};

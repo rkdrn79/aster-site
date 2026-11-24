@@ -1,0 +1,1 @@
+import{mm as e}from"./store-CXY6FVaj.js";function t(t){return`${e(t)} Chat`}export{t};

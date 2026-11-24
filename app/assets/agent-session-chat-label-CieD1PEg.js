@@ -1,1 +1,0 @@
-import{mm as e}from"./store-B2bxoDYN.js";function t(t){return`${e(t)} Chat`}export{t};

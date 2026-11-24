@@ -1,0 +1,1 @@
+import{J as e}from"./stale-document-visibility-BMN7Jxku.js";var t=null,n=null;function r(){return n}function i(){return t}function a(){return t!==null}e(()=>({tabId:null,seq:0}));function o(e,t){return!1}export{i,o as n,r,a as t};
