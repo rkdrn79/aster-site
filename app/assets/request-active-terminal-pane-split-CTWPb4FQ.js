@@ -1,0 +1,1 @@
+import{s as e}from"./activate-tab-and-focus-pane-DdZETlHD.js";function t(t){window.dispatchEvent(new CustomEvent(e,{detail:t}))}export{t};

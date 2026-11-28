@@ -1,1 +1,0 @@
-import{Wg as e}from"./store-NO6JPccZ.js";import{o as t}from"./delete-worktree-flow-DIZHJHTm.js";function n(n){return e(n)?t():n}function r(e,t){let r=e?.removalError&&!t?.isDeleting?e.removalError:t?.error??null;return r===null?null:n(r)}export{r as n,n as t};
