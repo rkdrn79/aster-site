@@ -1,1 +1,0 @@
-import{FA as e,yN as t}from"./store-CXY6FVaj.js";function n(t){return t?`project-group:${t}`:e}var r=`pinned`,i=`lineage:`;function a(e){return`${i}${e}`}function o(e){return a(e.hostId?t(e):e.id)}export{n,o as r,r as t};

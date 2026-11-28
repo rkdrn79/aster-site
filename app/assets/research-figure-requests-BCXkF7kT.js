@@ -1,1 +1,0 @@
-export{Vn as sendFigureQuickRequest}from"./App-C_5bB9C7.js";
